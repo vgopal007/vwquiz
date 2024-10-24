@@ -1,0 +1,654 @@
+[
+  {
+    "question": "If the function f(x) = 2x^3 - 3x^2 + 5x - 4, what is the value of f'(2)?",
+    "type": "RB",
+    "choices": [
+      "5",
+      "10",
+      "13",
+      "17"
+    ],
+    "correct_answer": "13",
+    "answer_explanation": "f'(x) = 6x^2 - 6x + 5. Plugging in x = 2 gives f'(2) = 6(2)^2 - 6(2) + 5 = 24 - 12 + 5 = 17.",
+    "difficulty_level": "hard",
+    "topic": "Calculus",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "In a right triangle, if one angle is 30 degrees, what is the length of the side opposite to it?",
+    "type": "RB",
+    "choices": [
+      "1/2",
+      "1",
+      "1/sqrt(2)",
+      "sqrt(3)/2"
+    ],
+    "correct_answer": "1/2",
+    "answer_explanation": "In a 30-60-90 triangle, the side opposite the 30-degree angle is half the hypotenuse.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The sum of the first 10 terms of the arithmetic sequence 2, 5, 8, ... is:",
+    "type": "RB",
+    "choices": [
+      "105",
+      "120",
+      "165",
+      "240"
+    ],
+    "correct_answer": "165",
+    "answer_explanation": "The nth term of an arithmetic sequence is given by a_n = a_1 + (n-1)d. The sum of the first n terms is n/2 * (a_1 + a_n).",
+    "difficulty_level": "medium",
+    "topic": "Arithmetic Sequences",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "If 3x - 5 = 2x + 7, what is the value of x?",
+    "type": "RB",
+    "choices": [
+      "-12",
+      "2",
+      "5",
+      "12"
+    ],
+    "correct_answer": "12",
+    "answer_explanation": "Rearranging gives x = 12.",
+    "difficulty_level": "medium",
+    "topic": "Algebra",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "True or False: The graph of a quadratic function is always a parabola.",
+    "type": "RB",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "answer_explanation": "Quadratic functions produce parabolic graphs.",
+    "difficulty_level": "medium",
+    "topic": "Graphing",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The derivative of the function f(x) = x^2 + 3x - 4 is:",
+    "type": "RB",
+    "choices": [
+      "2x + 3",
+      "x^2 + 3",
+      "2x + 4",
+      "x^2"
+    ],
+    "correct_answer": "2x + 3",
+    "answer_explanation": "The derivative of x^2 is 2x and the derivative of 3x is 3.",
+    "difficulty_level": "medium",
+    "topic": "Calculus",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "If sin(θ) = 0.6, what is cos(θ) in a right-angled triangle?",
+    "type": "RB",
+    "choices": [
+      "0.8",
+      "0.4",
+      "1.0",
+      "0.6"
+    ],
+    "correct_answer": "0.8",
+    "answer_explanation": "sin²(θ) + cos²(θ) = 1. Thus, cos(θ) = sqrt(1 - 0.36) = 0.8.",
+    "difficulty_level": "hard",
+    "topic": "Trigonometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Which of the following is the set of all real numbers that satisfy the inequality 2x - 3 > 1?",
+    "type": "RB",
+    "choices": [
+      "x > 2",
+      "x > 1",
+      "x < 2",
+      "x < 1"
+    ],
+    "correct_answer": "x > 2",
+    "answer_explanation": "Add 3 to both sides and divide by 2.",
+    "difficulty_level": "medium",
+    "topic": "Inequalities",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The line y = 2x + 1 is parallel to:",
+    "type": "RB",
+    "choices": [
+      "y = -2x + 1",
+      "y = 2x + 3",
+      "y = -1/2x + 3",
+      "x + y = 0"
+    ],
+    "correct_answer": "y = 2x + 3",
+    "answer_explanation": "Lines are parallel if they have the same slope.",
+    "difficulty_level": "medium",
+    "topic": "Linear Equations",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The value of the expression log(100) / log(10) is:",
+    "type": "RB",
+    "choices": [
+      "10",
+      "0",
+      "2",
+      "1"
+    ],
+    "correct_answer": "2",
+    "answer_explanation": "Using the properties of logarithms, log(100) / log(10) = log_10(100) = 2.",
+    "difficulty_level": "hard",
+    "topic": "Logarithms",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Simplify: (2x^2 * 3x^3) / (x^2)",
+    "type": "RB",
+    "choices": [
+      "6x^3",
+      "6x^2",
+      "5x^3",
+      "5x^2"
+    ],
+    "correct_answer": "6x^3",
+    "answer_explanation": "(2x^2 * 3x^3) / (x^2) = 6x^(5 - 2) = 6x^3.",
+    "difficulty_level": "hard",
+    "topic": "Exponents",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "In how many ways can you arrange 3 out of 5 books on a shelf?",
+    "type": "RB",
+    "choices": [
+      "60",
+      "10",
+      "20",
+      "120"
+    ],
+    "correct_answer": "60",
+    "answer_explanation": "Using permutation: P(5,3) = 5! / (5-3)! = 60.",
+    "difficulty_level": "hard",
+    "topic": "Combinatorics",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The equation of the circle with center (2,3) and radius 4 is:",
+    "type": "RB",
+    "choices": [
+      "(x-2)^2 + (y-3)^2 = 16",
+      "(x+2)^2 + (y+3)^2 = 16",
+      "(x-2)^2 + (y-3)^2 = 4",
+      "(x+2)^2 + (y+3)^2 = 4"
+    ],
+    "correct_answer": "(x-2)^2 + (y-3)^2 = 16",
+    "answer_explanation": "(x-2)^2 + (y-3)^2 = r^2 where r = 4.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Find the value of x if |2x + 1| = 9.",
+    "type": "RB",
+    "choices": [
+      "4, -5",
+      "4, 5",
+      "-4, -5",
+      "4"
+    ],
+    "correct_answer": "4, -5",
+    "answer_explanation": "Solve 2x + 1 = 9 and 2x + 1 = -9.",
+    "difficulty_level": "medium",
+    "topic": "Algebra",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The integral of 3x^2 is:",
+    "type": "RB",
+    "choices": [
+      "x^3 + C",
+      "3x^3",
+      "x^3",
+      "3x"
+    ],
+    "correct_answer": "x^3 + C",
+    "answer_explanation": "The integral of 3x^2 is x^3 + C, where C is the constant of integration.",
+    "difficulty_level": "hard",
+    "topic": "Calculus",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The derivative of the function f(x) = 5x^2 - 4x + 7 is:",
+    "type": "RB",
+    "choices": [
+      "5x - 4",
+      "10x - 4",
+      "10x + 4",
+      "5x + 7"
+    ],
+    "correct_answer": "10x - 4",
+    "answer_explanation": "The derivative of 5x^2 is 10x and the derivative of -4x is -4.",
+    "difficulty_level": "medium",
+    "topic": "Calculus",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "If cos(θ) = 0.8, what is sin(θ) in a right-angled triangle?",
+    "type": "RB",
+    "choices": [
+      "0.6",
+      "0.4",
+      "0.2",
+      "1.0"
+    ],
+    "correct_answer": "0.6",
+    "answer_explanation": "Using the identity sin²(θ) + cos²(θ) = 1. Therefore, sin(θ) = sqrt(1 - 0.64) = 0.6.",
+    "difficulty_level": "hard",
+    "topic": "Trigonometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Simplify: (x^2 - 4)/(x + 2)",
+    "type": "RB",
+    "choices": [
+      "x - 2",
+      "x + 2",
+      "x",
+      "2x"
+    ],
+    "correct_answer": "x - 2",
+    "answer_explanation": "(x^2 - 4) = (x + 2)(x - 2), hence (x + 2)(x - 2)/(x + 2) = x - 2.",
+    "difficulty_level": "medium",
+    "topic": "Algebra",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The area of a circle with radius 3 is:",
+    "type": "RB",
+    "choices": [
+      "9π",
+      "6π",
+      "3π",
+      "π"
+    ],
+    "correct_answer": "9π",
+    "answer_explanation": "The area of a circle is πr². Thus, for r = 3, the area is π(3²) = 9π.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Which of the following numbers is a prime number?",
+    "type": "RB",
+    "choices": [
+      "15",
+      "17",
+      "21",
+      "25"
+    ],
+    "correct_answer": "17",
+    "answer_explanation": "17 is a prime number as it is divisible only by 1 and itself.",
+    "difficulty_level": "medium",
+    "topic": "Number Theory",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "True or False: The product of two negative numbers is always positive.",
+    "type": "RB",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "answer_explanation": "Multiplying two negative numbers results in a positive product.",
+    "difficulty_level": "medium",
+    "topic": "Algebra",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "What is the value of 4! (4 factorial)?",
+    "type": "RB",
+    "choices": [
+      "12",
+      "16",
+      "24",
+      "32"
+    ],
+    "correct_answer": "24",
+    "answer_explanation": "4! = 4 * 3 * 2 * 1 = 24.",
+    "difficulty_level": "medium",
+    "topic": "Arithmetic",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Solve for x: 3x - 7 = 2x + 3",
+    "type": "RB",
+    "choices": [
+      "-10",
+      "0",
+      "3",
+      "10"
+    ],
+    "correct_answer": "10",
+    "answer_explanation": "Isolate x: 3x - 2x = 3 + 7; x = 10.",
+    "difficulty_level": "medium",
+    "topic": "Algebra",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The sum of the angles in a triangle is:",
+    "type": "RB",
+    "choices": [
+      "180°",
+      "360°",
+      "90°",
+      "120°"
+    ],
+    "correct_answer": "180°",
+    "answer_explanation": "The sum of the interior angles of any triangle is always 180°.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "If the sides of a square are doubled, by what factor is the area increased?",
+    "type": "RB",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "8"
+    ],
+    "correct_answer": "4",
+    "answer_explanation": "If the side length is doubled, the area (side²) is increased by a factor of 4.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "True or False: The square root of a negative number is imaginary.",
+    "type": "RB",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "answer_explanation": "The square root of a negative number is represented as an imaginary number (i.e., i = √-1).",
+    "difficulty_level": "medium",
+    "topic": "Complex Numbers",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "What is the value of 2^5?",
+    "type": "RB",
+    "choices": [
+      "10",
+      "16",
+      "32",
+      "64"
+    ],
+    "correct_answer": "32",
+    "answer_explanation": "2^5 = 2 * 2 * 2 * 2 * 2 = 32.",
+    "difficulty_level": "medium",
+    "topic": "Exponents",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Which of the following is an irrational number?",
+    "type": "RB",
+    "choices": [
+      "√2",
+      "2/3",
+      "4",
+      "1.5"
+    ],
+    "correct_answer": "√2",
+    "answer_explanation": "An irrational number cannot be expressed as a fraction.",
+    "difficulty_level": "medium",
+    "topic": "Number Theory",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The value of x in the equation 2x + 3 = 9 is:",
+    "type": "RB",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct_answer": "3",
+    "answer_explanation": "Solve for x: 2x + 3 = 9, so 2x = 6, and x = 3.",
+    "difficulty_level": "medium",
+    "topic": "Algebra",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "What is the perimeter of a rectangle with length 5 and width 3?",
+    "type": "RB",
+    "choices": [
+      "8",
+      "10",
+      "12",
+      "16"
+    ],
+    "correct_answer": "16",
+    "answer_explanation": "Perimeter = 2(length + width) = 2(5 + 3) = 16.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The volume of a sphere with radius r is given by which formula?",
+    "type": "RB",
+    "choices": [
+      "4/3 πr^3",
+      "πr^2",
+      "2πr",
+      "πr^3"
+    ],
+    "correct_answer": "4/3 πr^3",
+    "answer_explanation": "The volume of a sphere is (4/3)πr^3.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "If the function f(x) = 2x^3 - 3x^2 + 5x - 4, what is the value of f'(2)?",
+    "type": "RB",
+    "choices": [
+      "5",
+      "10",
+      "13",
+      "17"
+    ],
+    "correct_answer": "13",
+    "answer_explanation": "f'(x) = 6x^2 - 6x + 5. Plugging in x = 2 gives f'(2) = 6(2)^2 - 6(2) + 5 = 17.",
+    "difficulty_level": "hard",
+    "topic": "Calculus",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "In a right triangle, if one angle is 30 degrees, what is the length of the side opposite to it?",
+    "type": "RB",
+    "choices": [
+      "1/2",
+      "1",
+      "1/sqrt(2)",
+      "sqrt(3)/2"
+    ],
+    "correct_answer": "1/2",
+    "answer_explanation": "In a 30-60-90 triangle, the side opposite the 30-degree angle is half the hypotenuse.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The sum of the first 10 terms of the arithmetic sequence 2, 5, 8, ... is:",
+    "type": "RB",
+    "choices": [
+      "105",
+      "120",
+      "165",
+      "240"
+    ],
+    "correct_answer": "165",
+    "answer_explanation": "The nth term of an arithmetic sequence is given by a_n = a_1 + (n-1)d. The sum of the first n terms is n/2 * (a_1 + a_n).",
+    "difficulty_level": "medium",
+    "topic": "Arithmetic Sequences",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "If 3x - 5 = 2x + 7, what is the value of x?",
+    "type": "RB",
+    "choices": [
+      "-12",
+      "2",
+      "5",
+      "12"
+    ],
+    "correct_answer": "12",
+    "answer_explanation": "Rearranging gives x = 12.",
+    "difficulty_level": "medium",
+    "topic": "Algebra",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "True or False: The graph of a quadratic function is always a parabola.",
+    "type": "RB",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "answer_explanation": "Quadratic functions produce parabolic graphs.",
+    "difficulty_level": "medium",
+    "topic": "Graphing",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The derivative of the function f(x) = x^2 + 3x - 4 is:",
+    "type": "RB",
+    "choices": [
+      "2x + 3",
+      "x^2 + 3",
+      "2x + 4",
+      "x^2"
+    ],
+    "correct_answer": "2x + 3",
+    "answer_explanation": "The derivative of x^2 is 2x and the derivative of 3x is 3.",
+    "difficulty_level": "medium",
+    "topic": "Calculus",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "If sin(θ) = 0.6, what is cos(θ) in a right-angled triangle?",
+    "type": "RB",
+    "choices": [
+      "0.8",
+      "0.4",
+      "1.0",
+      "0.6"
+    ],
+    "correct_answer": "0.8",
+    "answer_explanation": "sin²(θ) + cos²(θ) = 1. Thus, cos(θ) = sqrt(1 - 0.36) = 0.8.",
+    "difficulty_level": "hard",
+    "topic": "Trigonometry",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Which of the following is the set of all real numbers that satisfy the inequality 2x - 3 > 1?",
+    "type": "RB",
+    "choices": [
+      "x > 2",
+      "x > 1",
+      "x < 2",
+      "x < 1"
+    ],
+    "correct_answer": "x > 2",
+    "answer_explanation": "Add 3 to both sides and divide by 2.",
+    "difficulty_level": "medium",
+    "topic": "Inequalities",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The line y = 2x + 1 is parallel to:",
+    "type": "RB",
+    "choices": [
+      "y = -2x + 1",
+      "y = 2x + 3",
+      "y = -1/2x + 3",
+      "x + y = 0"
+    ],
+    "correct_answer": "y = 2x + 3",
+    "answer_explanation": "Lines are parallel if they have the same slope.",
+    "difficulty_level": "medium",
+    "topic": "Linear Equations",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The value of the expression log(100) / log(10) is:",
+    "type": "RB",
+    "choices": [
+      "10",
+      "0",
+      "2",
+      "1"
+    ],
+    "correct_answer": "2",
+    "answer_explanation": "Using the properties of logarithms, log(100) / log(10) = log_10(100) = 2.",
+    "difficulty_level": "hard",
+    "topic": "Logarithms",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "Simplify: (2x^2 * 3x^3) / (x^2)",
+    "type": "RB",
+    "choices": [
+      "6x^3",
+      "6x^2",
+      "5x^3",
+      "5x^2"
+    ],
+    "correct_answer": "6x^3",
+    "answer_explanation": "(2x^2 * 3x^3) / (x^2) = 6x^(5 - 2) = 6x^3.",
+    "difficulty_level": "hard",
+    "topic": "Exponents",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "In how many ways can you arrange 3 out of 5 books on a shelf?",
+    "type": "RB",
+    "choices": [
+      "60",
+      "10",
+      "20",
+      "120"
+    ],
+    "correct_answer": "60",
+    "answer_explanation": "Using permutation: P(5,3) = 5! / (5-3)! = 60.",
+    "difficulty_level": "hard",
+    "topic": "Combinatorics",
+    "reference": "SAT prep book"
+  },
+  {
+    "question": "The equation of the circle with center (2,3) and radius 4 is:",
+    "type": "RB",
+    "choices": [
+      "(x-2)^2 + (y-3)^2 = 16",
+      "(x+2)^2 + (y+3)^2 = 16",
+      "(x-2)^2 + (y-3)^2 = 4",
+      "(x+2)^2 + (y+3)^2 = 4"
+    ],
+    "correct_answer": "(x-2)^2 + (y-3)^2 = 16",
+    "answer_explanation": "(x-2)^2 + (y-3)^2 = r^2 where r = 4.",
+    "difficulty_level": "medium",
+    "topic": "Geometry",
+    "reference": "SAT prep book"
+  }
+]

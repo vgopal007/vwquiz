@@ -1,0 +1,6 @@
+python manage.py dbshell
+.schema quizapp_quizsession
+
+python manage.py shell
+from quizapp.models import QuizSession
+QuizSession.objects.all().delete()

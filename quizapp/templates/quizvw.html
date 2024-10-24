@@ -1,0 +1,154 @@
+<!doctype html>
+
+<!-- quiz.html loaded --> 
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Quiz.html - Django Quiz App</title>
+  </head>
+  <body>
+   
+    <!-- <script src="https://unpkg.com/vue@3.0.0-rc.5/dist/vue.global.prod.js"></script> -->
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+ 
+
+ <div class="container mt-5 pt-5">
+ <div class="col-md-6 mx-auto">
+          
+ <h3>Give Quiz</h3>
+
+<div id="app">
+</div>
+
+ 
+  <!-- Quiz container -->
+  <div class="quiz-container">
+        <!-- Question display -->
+        <div class="question-display">
+        <p id="question-text">{{ question.question }}</p>
+        </div> 
+
+        <!-- Navigation buttons -->
+        <div class="nav-buttons">
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+            <button id="goto-button">Go to question</button>
+            <input type="number" id="goto-input" placeholder="Enter question number">
+            <button id="review-button">Review</button>
+        </div> <!-- Navigation buttons -->
+  </div> <!-- Quiz container -->
+ 
+  <div v-for="question in questions">
+                 <hr>
+  	         <!-- <p>[[question.question]]</p> -->
+                <div class="form-check" v-for="(answer, index) in question.answer">
+                   <input  
+                    @change="checkAnswer($event, question.uid)" 
+                    :value="answer.answer" 
+                    class="form-check-input" 
+                    :type="question.question_type === 'CB' ? 'checkbox' : 'radio'" 
+                    :name="question.question_type === 'CB' ? question.uid : 'flexRadioDefault' + question.uid" 
+                    :id="question.question_type === 'CB' ? question.uid + '_' + index : 'flexRadioDefault' + question.uid + '_' + index">
+                   <label 
+                     class="form-check-label" 
+                     :for="question.question_type === 'CB' ? question.uid + '_' + index : 'flexRadioDefault' + question.uid + '_' + index">
+                     [[answer.answer]]
+                   </label>
+                </div>
+   	</div>   <!-- Question in questions loop -->
+
+
+<script>
+    const app = Vue.createApp({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        data() {
+          return {
+            subject: '{{subject}}',
+            questions :[]
+            currentQuestionIndex: 0 
+                   }
+        },
+        methods : {
+            getQuestions(){
+                var _this = this
+                fetch(`/api/get-quiz/?subject=${this.subject}`)
+                .then(response => response.json())
+                .then(result =>{
+                    console.log(result)
+                    _this.questions = result.data
+                })
+            },
+            checkAnswer(event, uid){
+
+                this.questions.map(question =>{
+                   
+                    answer = question.answer
+                    for(var i=0; i<answer.length; i++){
+                        if(answer[i].answer==event.target.value){
+                            if(answer[i].is_correct){
+                                console.log('Your answer is correct!')
+                                alert("Hurray your answer is correct !????")
+                            }else{
+                                console.log('Your answer is wrong!')
+                                alert("Better luck next time !????")
+                            }
+                        }
+                    }
+
+                })
+              console.log(event.target.value  , uid)
+            }
+        },
+        created() {
+            this.getQuestions( )
+         },
+      });
+
+      app.mount('#app')
+ 
+function renderQuestion(question) {
+    const questionContainer = document.getElementById('questionContainer');
+    questionContainer.innerHTML = ''; // Clear previous content
+
+    const questionText = document.createElement('p');
+    questionText.textContent = question.text;
+    questionContainer.appendChild(questionText);
+
+    if (question.question_type === 'IN') {
+        // Render an input field for open-ended questions
+        const inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.placeholder = 'Type your answer...';
+        questionContainer.appendChild(inputField);
+    } else if (question.question_type === 'RB') {
+        // Render true/false radio buttons
+        const trueLabel = document.createElement('label');
+        trueLabel.innerHTML = '<input type="radio" name="trueFalse" value="true"> True';
+        const falseLabel = document.createElement('label');
+        falseLabel.innerHTML = '<input type="radio" name="trueFalse" value="false"> False';
+        questionContainer.appendChild(trueLabel);
+        questionContainer.appendChild(falseLabel);
+    } else if (question.question_type === 'CB') {
+        // Render multiple-choice checkboxes
+        question.options.forEach((option) => {
+            const checkboxLabel = document.createElement('label');
+            checkboxLabel.innerHTML = `<input type="checkbox" name="choices" value="${option}"> ${option}`;
+            questionContainer.appendChild(checkboxLabel);
+        });
+    }
+}
+
+
+</script> 
+ 
+</body>
+</html>

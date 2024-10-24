@@ -1,0 +1,30 @@
+.marked {
+  background-color: yellow;
+}
+.bg-box {
+  background-color: #ffffee; /* Light gray background */
+  border: 2px solid #ddd; /* Gray border */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 4px 20px;
+}
+.question-box {
+  background-color: #ffaaee; /* Light gray background */
+  border: 2px solid #ddd; /* Gray border */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 4px 20px;
+}
+.fixed-buttons {
+  position: fixed !important;
+  bottom: 40px; /* 40 pixels above the bottom */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  z-index: 1000; /* Ensure the buttons stay on top */
+  background-color: white; /* Optional: Add a background to the button area */
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+

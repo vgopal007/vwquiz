@@ -1,0 +1,495 @@
+[
+  {
+    "question": "What is the main focus of psychology?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The study of behavior and mental processes.",
+    "answer_explanation": "Psychology focuses on understanding human and animal behavior, as well as mental processes.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to Psychology",
+    "reference": "https://www.simplypsychology.org/whatispsychology.html"
+  },
+  {
+    "question": "True or False: Sigmund Freud is best known for developing the theory of psychoanalysis.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Sigmund Freud is widely regarded as the founder of psychoanalysis, a clinical method for treating psychopathology.",
+    "difficulty_level": "easy",
+    "topic": "History of Psychology",
+    "reference": "https://www.simplypsychology.org/Sigmund-Freud.html"
+  },
+  {
+    "question": "Which of the following are primary schools of thought in psychology?",
+    "type": "CB",
+    "choices": ["Behaviorism", "Cognitive Psychology", "Astrology", "Psychoanalysis"],
+    "correct_answer": ["Behaviorism", "Cognitive Psychology", "Psychoanalysis"],
+    "answer_explanation": "Astrology is not a school of thought in psychology, while Behaviorism, Cognitive Psychology, and Psychoanalysis are.",
+    "difficulty_level": "easy",
+    "topic": "Schools of Thought",
+    "reference": "https://www.simplypsychology.org/perspectives.html"
+  },
+  {
+    "question": "Who is known for the theory of classical conditioning?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Ivan Pavlov",
+    "answer_explanation": "Ivan Pavlov's experiments with dogs led to the discovery of classical conditioning.",
+    "difficulty_level": "easy",
+    "topic": "Behaviorism",
+    "reference": "https://www.simplypsychology.org/classical-conditioning.html"
+  },
+  {
+    "question": "True or False: B.F. Skinner was a major proponent of behaviorism.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "B.F. Skinner is famous for his work in behaviorism and operant conditioning.",
+    "difficulty_level": "easy",
+    "topic": "Behaviorism",
+    "reference": "https://www.simplypsychology.org/operant-conditioning.html"
+  },
+  {
+    "question": "Which of the following concepts are related to cognitive psychology?",
+    "type": "CB",
+    "choices": ["Memory", "Learning", "Motivation", "Perception"],
+    "correct_answer": ["Memory", "Perception"],
+    "answer_explanation": "Cognitive psychology focuses on mental processes like memory and perception.",
+    "difficulty_level": "easy",
+    "topic": "Cognitive Psychology",
+    "reference": "https://www.simplypsychology.org/cognitive.html"
+  },
+  {
+    "question": "What is cognitive dissonance?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The discomfort experienced when holding two conflicting beliefs.",
+    "answer_explanation": "Cognitive dissonance is a psychological theory proposed by Leon Festinger to describe the mental discomfort from conflicting beliefs.",
+    "difficulty_level": "easy",
+    "topic": "Cognitive Psychology",
+    "reference": "https://www.simplypsychology.org/cognitive-dissonance.html"
+  },
+  {
+    "question": "True or False: Carl Rogers is associated with humanistic psychology.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Carl Rogers was one of the founders of humanistic psychology, focusing on personal growth and self-actualization.",
+    "difficulty_level": "easy",
+    "topic": "Humanistic Psychology",
+    "reference": "https://www.simplypsychology.org/humanistic.html"
+  },
+  {
+    "question": "Which of the following are defense mechanisms according to Freud's theory of psychoanalysis?",
+    "type": "CB",
+    "choices": ["Repression", "Denial", "Sublimation", "Consciousness"],
+    "correct_answer": ["Repression", "Denial", "Sublimation"],
+    "answer_explanation": "Repression, denial, and sublimation are defense mechanisms, while consciousness is a broader mental state.",
+    "difficulty_level": "easy",
+    "topic": "Psychoanalysis",
+    "reference": "https://www.simplypsychology.org/defense-mechanisms.html"
+  },
+  {
+    "question": "Who developed the theory of operant conditioning?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "B.F. Skinner",
+    "answer_explanation": "B.F. Skinner's operant conditioning theory focused on reinforcement and punishment in shaping behavior.",
+    "difficulty_level": "easy",
+    "topic": "Behaviorism",
+    "reference": "https://www.simplypsychology.org/operant-conditioning.html"
+  },
+  {
+    "question": "What is the primary focus of developmental psychology?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The study of how people grow and change throughout their lifespan.",
+    "answer_explanation": "Developmental psychology examines the physical, cognitive, and social changes that occur throughout life.",
+    "difficulty_level": "easy",
+    "topic": "Developmental Psychology",
+    "reference": "https://www.simplypsychology.org/developmental-psychology.html"
+  },
+  {
+    "question": "True or False: The DSM-5 is a manual used to diagnose mental disorders.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "The DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition) is used by mental health professionals to diagnose mental disorders.",
+    "difficulty_level": "easy",
+    "topic": "Clinical Psychology",
+    "reference": "https://www.simplypsychology.org/dsm.html"
+  },
+  {
+    "question": "Which of the following are considered psychological approaches to understanding behavior?",
+    "type": "CB",
+    "choices": ["Biological Approach", "Cognitive Approach", "Behavioral Approach", "Astrological Approach"],
+    "correct_answer": ["Biological Approach", "Cognitive Approach", "Behavioral Approach"],
+    "answer_explanation": "Astrological Approach is not a psychological method; the others are valid psychological approaches.",
+    "difficulty_level": "easy",
+    "topic": "Psychological Approaches",
+    "reference": "https://www.simplypsychology.org/approaches.html"
+  },
+  {
+    "question": "What does the term 'self-actualization' refer to?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The realization or fulfillment of one's talents and potential.",
+    "answer_explanation": "Self-actualization is a concept from humanistic psychology, notably proposed by Abraham Maslow in his hierarchy of needs.",
+    "difficulty_level": "easy",
+    "topic": "Humanistic Psychology",
+    "reference": "https://www.simplypsychology.org/maslow.html"
+  },
+  {
+    "question": "True or False: Aaron Beck is known for developing cognitive therapy.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Aaron Beck is known as the father of cognitive therapy, which focuses on changing negative thought patterns.",
+    "difficulty_level": "easy",
+    "topic": "Cognitive Psychology",
+    "reference": "https://www.simplypsychology.org/cognitive-therapy.html"
+  },
+  {
+    "question": "Which of the following factors can influence a person's personality?",
+    "type": "CB",
+    "choices": ["Genetics", "Environment", "Culture", "None of the above"],
+    "correct_answer": ["Genetics", "Environment", "Culture"],
+    "answer_explanation": "All these factors can significantly influence a person's personality development.",
+    "difficulty_level": "easy",
+    "topic": "Personality Psychology",
+    "reference": "https://www.simplypsychology.org/personality.html"
+  },
+  {
+    "question": "What is the primary objective of social psychology?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "To understand how individuals' thoughts, feelings, and behaviors are influenced by the actual, imagined, or implied presence of others.",
+    "answer_explanation": "Social psychology examines how social interactions and contexts affect individual behavior.",
+    "difficulty_level": "easy",
+    "topic": "Social Psychology",
+    "reference": "https://www.simplypsychology.org/social-psychology.html"
+  },
+  {
+    "question": "True or False: Operant conditioning involves associating a neutral stimulus with an unconditioned stimulus.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "False",
+    "answer_explanation": "Operant conditioning involves reinforcement and punishment, while classical conditioning involves associating a neutral stimulus with an unconditioned stimulus.",
+    "difficulty_level": "easy",
+    "topic": "Learning Theories",
+    "reference": "https://www.simplypsychology.org/learning.html"
+  },
+  {
+    "question": "Which of the following techniques are commonly used in therapy?",
+    "type": "CB",
+    "choices": ["Cognitive Behavioral Therapy (CBT)", "Exposure Therapy", "Psychoanalysis", "Astrology"],
+    "correct_answer": ["Cognitive Behavioral Therapy (CBT)", "Exposure Therapy", "Psychoanalysis"],
+    "answer_explanation": "Astrology is not a recognized therapeutic technique; the others are valid therapy methods.",
+    "difficulty_level": "easy",
+    "topic": "Therapeutic Techniques",
+    "reference": "https://www.simplypsychology.org/therapy.html"
+  },
+  {
+    "question": "What does the term 'bystander effect' refer to?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The phenomenon where individuals are less likely to help a victim when other people are present.",
+    "answer_explanation": "The bystander effect explains how individuals often fail to act in emergency situations when others are around.",
+    "difficulty_level": "easy",
+    "topic": "Social Psychology",
+    "reference": "https://www.simplypsychology.org/bystander-effect.html"
+  },
+  {
+    "question": "True or False: Groupthink occurs when a group values harmony and conformity over critical analysis.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Groupthink can lead to poor decision-making as members prioritize consensus over critical evaluation.",
+    "difficulty_level": "easy",
+    "topic": "Social Psychology",
+    "reference": "https://www.simplypsychology.org/groupthink.html"
+  },
+  {
+    "question": "Which of the following are symptoms of anxiety disorders?",
+    "type": "CB",
+    "choices": ["Excessive worrying", "Panic attacks", "Phobias", "Euphoria"],
+    "correct_answer": ["Excessive worrying", "Panic attacks", "Phobias"],
+    "answer_explanation": "Euphoria is not a symptom of anxiety disorders; the others are common symptoms.",
+    "difficulty_level": "easy",
+    "topic": "Anxiety Disorders",
+    "reference": "https://www.simplypsychology.org/anxiety-disorders.html"
+  },
+  {
+    "question": "What is the primary focus of neuropsychology?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The study of how brain function affects behavior and cognitive processes.",
+    "answer_explanation": "Neuropsychology explores the relationship between brain function and behavior, often in clinical settings.",
+    "difficulty_level": "easy",
+    "topic": "Neuropsychology",
+    "reference": "https://www.simplypsychology.org/neuropsychology.html"
+  },
+  {
+    "question": "True or False: Maslow's Hierarchy of Needs is a model that describes human motivation.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Maslow's Hierarchy of Needs is a psychological theory that categorizes human needs into a five-tier model.",
+    "difficulty_level": "easy",
+    "topic": "Motivation",
+    "reference": "https://www.simplypsychology.org/maslow.html"
+  },
+  {
+    "question": "What is the primary focus of forensic psychology?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The application of psychological principles to legal matters and the criminal justice system.",
+    "answer_explanation": "Forensic psychology involves understanding how psychological principles apply in legal contexts.",
+    "difficulty_level": "easy",
+    "topic": "Forensic Psychology",
+    "reference": "https://www.simplypsychology.org/forensic-psychology.html"
+  },
+  {
+    "question": "True or False: Cognitive-behavioral therapy (CBT) focuses on changing both thoughts and behaviors.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "CBT emphasizes altering dysfunctional thoughts and behaviors to improve mental health.",
+    "difficulty_level": "easy",
+    "topic": "Therapeutic Techniques",
+    "reference": "https://www.simplypsychology.org/cognitive-therapy.html"
+  },
+  {
+    "question": "Which of the following psychologists is associated with the theory of operant conditioning?",
+    "type": "CB",
+    "choices": ["B.F. Skinner", "Sigmund Freud", "Albert Bandura", "John Watson"],
+    "correct_answer": ["B.F. Skinner"],
+    "answer_explanation": "B.F. Skinner developed the theory of operant conditioning, which focuses on reinforcement and punishment.",
+    "difficulty_level": "easy",
+    "topic": "Behaviorism",
+    "reference": "https://www.simplypsychology.org/operant-conditioning.html"
+  },
+  {
+    "question": "What is 'learned helplessness' in psychology?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "A condition in which an individual feels unable to control or change a situation, often resulting from repeated failure or trauma.",
+    "answer_explanation": "Learned helplessness occurs when an individual believes they have no control over their environment, leading to passivity.",
+    "difficulty_level": "easy",
+    "topic": "Cognitive Psychology",
+    "reference": "https://www.simplypsychology.org/learned-helplessness.html"
+  },
+  {
+    "question": "True or False: The id, ego, and superego are components of Sigmund Freud’s model of the mind.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Freud's model of the mind includes the id (instinctual desires), the ego (reality-based decision maker), and the superego (moral compass).",
+    "difficulty_level": "easy",
+    "topic": "Psychoanalysis",
+    "reference": "https://www.simplypsychology.org/id-ego-superego.html"
+  },
+  {
+    "question": "Which of the following are stages in Piaget’s theory of cognitive development?",
+    "type": "CB",
+    "choices": ["Sensorimotor", "Preoperational", "Concrete Operational", "Post-conventional"],
+    "correct_answer": ["Sensorimotor", "Preoperational", "Concrete Operational"],
+    "answer_explanation": "The stages in Piaget’s theory are Sensorimotor, Preoperational, Concrete Operational, and Formal Operational.",
+    "difficulty_level": "easy",
+    "topic": "Developmental Psychology",
+    "reference": "https://www.simplypsychology.org/piaget.html"
+  },
+  {
+    "question": "What is 'observational learning' in psychology?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Learning that occurs by observing the behavior of others.",
+    "answer_explanation": "Observational learning, as demonstrated by Albert Bandura, is learning that occurs through observing and imitating others.",
+    "difficulty_level": "easy",
+    "topic": "Social Psychology",
+    "reference": "https://www.simplypsychology.org/observational-learning.html"
+  },
+  {
+    "question": "True or False: Erik Erikson developed a theory of psychosocial development consisting of eight stages.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Erik Erikson's theory of psychosocial development consists of eight stages, each associated with a specific psychological conflict.",
+    "difficulty_level": "easy",
+    "topic": "Developmental Psychology",
+    "reference": "https://www.simplypsychology.org/Erik-Erikson.html"
+  },
+  {
+    "question": "Which of the following are types of attachment according to attachment theory?",
+    "type": "CB",
+    "choices": ["Secure", "Anxious", "Avoidant", "Disorganized"],
+    "correct_answer": ["Secure", "Anxious", "Avoidant", "Disorganized"],
+    "answer_explanation": "Attachment theory outlines these four main types of attachment that develop in infancy and can impact relationships later in life.",
+    "difficulty_level": "easy",
+    "topic": "Developmental Psychology",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "What is 'classical conditioning'?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "A learning process that occurs when two stimuli are repeatedly paired, resulting in a response that is initially elicited by one stimulus being elicited by the other.",
+    "answer_explanation": "Classical conditioning, as demonstrated by Pavlov, involves learning by association between a neutral stimulus and an unconditioned stimulus.",
+    "difficulty_level": "easy",
+    "topic": "Behaviorism",
+    "reference": "https://www.simplypsychology.org/classical-conditioning.html"
+  },
+  {
+    "question": "True or False: Albert Bandura is known for his social learning theory.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Albert Bandura developed social learning theory, which emphasizes learning through observation and imitation.",
+    "difficulty_level": "easy",
+    "topic": "Social Psychology",
+    "reference": "https://www.simplypsychology.org/bandura.html"
+  },
+  {
+    "question": "Which of the following are major symptoms of depression?",
+    "type": "CB",
+    "choices": ["Sadness", "Loss of interest", "Increased energy", "Feelings of worthlessness"],
+    "correct_answer": ["Sadness", "Loss of interest", "Feelings of worthlessness"],
+    "answer_explanation": "Major symptoms of depression include sadness, loss of interest in activities, and feelings of worthlessness. Increased energy is not a typical symptom.",
+    "difficulty_level": "easy",
+    "topic": "Mental Health",
+    "reference": "https://www.simplypsychology.org/depression.html"
+  },
+  {
+    "question": "What does the term 'unconscious mind' refer to in psychoanalysis?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The part of the mind that contains thoughts, memories, and desires that are outside of conscious awareness.",
+    "answer_explanation": "In psychoanalysis, the unconscious mind holds repressed thoughts and desires that influence behavior.",
+    "difficulty_level": "easy",
+    "topic": "Psychoanalysis",
+    "reference": "https://www.simplypsychology.org/unconscious-mind.html"
+  },
+  {
+    "question": "True or False: Gestalt psychology focuses on how people perceive and experience objects as whole forms.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Gestalt psychology emphasizes the human tendency to perceive objects as whole rather than in parts.",
+    "difficulty_level": "easy",
+    "topic": "Cognitive Psychology",
+    "reference": "https://www.simplypsychology.org/gestalt.html"
+  },
+  {
+    "question": "Which of the following are factors that can influence memory retrieval?",
+    "type": "CB",
+    "choices": ["Context", "Emotions", "Repetition", "Imagination"],
+    "correct_answer": ["Context", "Emotions", "Repetition"],
+    "answer_explanation": "Memory retrieval can be influenced by the context in which the memory was formed, the emotional state, and how often it was reinforced.",
+    "difficulty_level": "easy",
+    "topic": "Memory",
+    "reference": "https://www.simplypsychology.org/memory.html"
+  },
+  {
+    "question": "Who developed the concept of Attachment Theory?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "John Bowlby",
+    "answer_explanation": "John Bowlby was the British psychologist who developed the concept of Attachment Theory.",
+    "difficulty_level": "easy",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "True or False: Attachment styles formed during childhood can affect relationships in adulthood.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Attachment styles formed during childhood can have a significant impact on adult relationships, according to Attachment Theory.",
+    "difficulty_level": "easy",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "Which of the following are recognized attachment styles?",
+    "type": "CB",
+    "choices": ["Secure", "Anxious-Ambivalent", "Avoidant", "Fearful"],
+    "correct_answer": ["Secure", "Anxious-Ambivalent", "Avoidant"],
+    "answer_explanation": "The recognized attachment styles are Secure, Anxious-Ambivalent, and Avoidant; 'Fearful' is not one of the primary styles.",
+    "difficulty_level": "easy",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "What is the primary characteristic of a secure attachment style?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Confidence and trust in close relationships.",
+    "answer_explanation": "Individuals with a secure attachment style tend to have confidence in their relationships and trust that their needs will be met.",
+    "difficulty_level": "easy",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "True or False: The Strange Situation is a method used to assess attachment in infants.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "The Strange Situation, developed by Mary Ainsworth, is a procedure used to assess the attachment style of infants.",
+    "difficulty_level": "easy",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/ainsworth.html"
+  },
+  {
+    "question": "Which of the following behaviors are typically displayed by children with an anxious-ambivalent attachment style?",
+    "type": "CB",
+    "choices": ["Clinginess", "Fear of abandonment", "Confidence", "Independence"],
+    "correct_answer": ["Clinginess", "Fear of abandonment"],
+    "answer_explanation": "Children with an anxious-ambivalent attachment style tend to be clingy and have a fear of abandonment.",
+    "difficulty_level": "easy",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "What is a key characteristic of avoidant attachment style in children?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "The child tends to avoid closeness and emotional connection with caregivers.",
+    "answer_explanation": "Children with an avoidant attachment style often display emotional distance and tend to avoid close relationships with their caregivers.",
+    "difficulty_level": "medium",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "True or False: Attachment Theory suggests that early relationships with caregivers do not significantly affect future relationships.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "False",
+    "answer_explanation": "Attachment Theory emphasizes that early relationships with caregivers are crucial for shaping future relationships.",
+    "difficulty_level": "medium",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "Which of the following behaviors are typical of securely attached children?",
+    "type": "CB",
+    "choices": ["Comfort in exploring their environment", "Confidence in seeking help from caregivers", "Fear of strangers", "Avoiding social interactions"],
+    "correct_answer": ["Comfort in exploring their environment", "Confidence in seeking help from caregivers"],
+    "answer_explanation": "Securely attached children are comfortable exploring their environment and seeking help from caregivers when needed.",
+    "difficulty_level": "easy",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  },
+  {
+    "question": "Who expanded Attachment Theory to include adult attachment patterns?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Mary Main",
+    "answer_explanation": "Mary Main extended the application of Attachment Theory to adult attachment patterns, providing insight into how early attachments affect adult relationships.",
+    "difficulty_level": "medium",
+    "topic": "Attachment Theory",
+    "reference": "https://www.simplypsychology.org/attachment.html"
+  }
+]
+
+
+

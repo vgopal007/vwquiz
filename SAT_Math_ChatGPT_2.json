@@ -1,0 +1,203 @@
+[
+  {
+    "question": "If 4^(x+1) = 64, what is the value of x?",
+    "type": "RB",
+    "choices": ["1", "2", "3", "4"],
+    "correct_answer": "2",
+    "answer_explanation": "Rewrite 64 as a power of 4: 4^(x + 1) = 4^3, so x + 1 = 3, which gives x = 2.",
+    "difficulty_level": "Medium",
+    "topic": "Exponents",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "A car travels 240 miles in 5 hours. What is the car's average speed in miles per hour?",
+    "type": "RB",
+    "choices": ["40", "45", "48", "50"],
+    "correct_answer": "48",
+    "answer_explanation": "Speed is distance divided by time. 240 miles ÷ 5 hours = 48 miles per hour.",
+    "difficulty_level": "Medium",
+    "topic": "Rates and Speed",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "In the equation 2x - 5y = 10, what is the slope of the line?",
+    "type": "RB",
+    "choices": ["-2", "2", "-5/2", "5/2"],
+    "correct_answer": "-2",
+    "answer_explanation": "Rewrite the equation in slope-intercept form: y = mx + b. Solving 2x - 5y = 10 for y, we get y = (2/5)x - 2, so the slope is -2.",
+    "difficulty_level": "Medium",
+    "topic": "Linear Equations",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If the area of a circle is 49π square units, what is the radius?",
+    "type": "RB",
+    "choices": ["7", "14", "49", "21"],
+    "correct_answer": "7",
+    "answer_explanation": "The area of a circle is πr^2, so if the area is 49π, then r^2 = 49, which gives r = 7.",
+    "difficulty_level": "Medium",
+    "topic": "Geometry",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If the probability of an event occurring is 0.3, what is the probability of the event not occurring?",
+    "type": "RB",
+    "choices": ["0.3", "0.5", "0.7", "0.8"],
+    "correct_answer": "0.7",
+    "answer_explanation": "The probability of an event not occurring is 1 minus the probability of it occurring: 1 - 0.3 = 0.7.",
+    "difficulty_level": "Medium",
+    "topic": "Probability",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "The line 3x + 4y = 12 intersects the x-axis at which point?",
+    "type": "RB",
+    "choices": ["(0, 3)", "(4, 0)", "(0, 4)", "(12, 0)"],
+    "correct_answer": "(4, 0)",
+    "answer_explanation": "To find the x-intercept, set y = 0 and solve for x: 3x + 4(0) = 12, so x = 4. Therefore, the x-intercept is (4, 0).",
+    "difficulty_level": "Medium",
+    "topic": "Linear Equations",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "A triangle has sides of lengths 6, 8, and 10. Is this triangle a right triangle?",
+    "type": "RB",
+    "choices": ["Yes", "No", "Not enough information"],
+    "correct_answer": "Yes",
+    "answer_explanation": "This is a Pythagorean triple (6^2 + 8^2 = 10^2), so the triangle is a right triangle.",
+    "difficulty_level": "Medium",
+    "topic": "Geometry",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If f(x) = x^3 - 4x, what is f'(x), the derivative of f(x)?",
+    "type": "RB",
+    "choices": ["3x^2 - 4", "3x - 4", "x^3 - 4", "3x^2 - 4x"],
+    "correct_answer": "3x^2 - 4",
+    "answer_explanation": "The derivative of f(x) = x^3 - 4x is f'(x) = 3x^2 - 4.",
+    "difficulty_level": "Hard",
+    "topic": "Calculus",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If a > 0, which of the following could be the graph of y = a^x?",
+    "type": "RB",
+    "choices": ["A graph that rises to the right", "A graph that falls to the right", "A horizontal line", "A vertical line"],
+    "correct_answer": "A graph that rises to the right",
+    "answer_explanation": "The graph of an exponential function y = a^x, where a > 0, rises to the right as x increases.",
+    "difficulty_level": "Medium",
+    "topic": "Exponential Functions",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "What is the sum of the solutions to the equation x^2 - 5x + 6 = 0?",
+    "type": "RB",
+    "choices": ["1", "5", "6", "-5"],
+    "correct_answer": "5",
+    "answer_explanation": "The sum of the solutions to a quadratic equation ax^2 + bx + c = 0 is -b/a. Here, b = -5 and a = 1, so the sum is 5.",
+    "difficulty_level": "Medium",
+    "topic": "Quadratic Equations",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "What is the value of cos(30°)?",
+    "type": "RB",
+    "choices": ["√3/2", "1/2", "√2/2", "0"],
+    "correct_answer": "√3/2",
+    "answer_explanation": "The cosine of 30° is √3/2.",
+    "difficulty_level": "Medium",
+    "topic": "Trigonometry",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If 5x - 3 = 2x + 9, what is the value of x?",
+    "type": "RB",
+    "choices": ["2", "3", "4", "5"],
+    "correct_answer": "4",
+    "answer_explanation": "First, subtract 2x from both sides: 3x - 3 = 9. Then, add 3 to both sides: 3x = 12. Divide by 3: x = 4.",
+    "difficulty_level": "Medium",
+    "topic": "Algebra",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "What is the solution set to the inequality 2x - 5 > 9?",
+    "type": "RB",
+    "choices": ["x > 2", "x > 4", "x > 7", "x > 5"],
+    "correct_answer": "x > 7",
+    "answer_explanation": "Add 5 to both sides: 2x > 14. Then divide by 2: x > 7.",
+    "difficulty_level": "Medium",
+    "topic": "Inequalities",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "What is the value of log_3(81)?",
+    "type": "RB",
+    "choices": ["3", "4", "5", "6"],
+    "correct_answer": "4",
+    "answer_explanation": "log_3(81) means 3 raised to what power equals 81. Since 3^4 = 81, log_3(81) = 4.",
+    "difficulty_level": "Medium",
+    "topic": "Logarithms",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "The length of the hypotenuse of a right triangle is 13, and one leg is 5. What is the length of the other leg?",
+    "type": "RB",
+    "choices": ["8", "10", "12", "15"],
+    "correct_answer": "12",
+    "answer_explanation": "Using the Pythagorean theorem: 5^2 + x^2 = 13^2. Solving for x, we get x = 12.",
+    "difficulty_level": "Medium",
+    "topic": "Geometry",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "The expression 2x^2 - 4x + 6 is factored as:",
+    "type": "RB",
+    "choices": ["2(x - 1)^2", "2(x^2 - 2x + 3)", "2(x - 3)(x + 2)", "x(2x - 4)"],
+    "correct_answer": "2(x^2 - 2x + 3)",
+    "answer_explanation": "Factor out the 2 from all terms: 2(x^2 - 2x + 3).",
+    "difficulty_level": "Medium",
+    "topic": "Algebra",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If x > 0, which of the following is true about the graph of y = log(x)?",
+    "type": "RB",
+    "choices": ["The graph is always increasing.", "The graph is always decreasing.", "The graph is constant.", "The graph has no slope."],
+    "correct_answer": "The graph is always increasing.",
+    "answer_explanation": "The graph of y = log(x) is increasing for all positive values of x.",
+    "difficulty_level": "Medium",
+    "topic": "Logarithms",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If the product of two numbers is 12 and their sum is 7, what are the two numbers?",
+    "type": "RB",
+    "choices": ["3 and 4", "2 and 5", "6 and 1", "3 and 5"],
+    "correct_answer": "3 and 4",
+    "answer_explanation": "The two numbers whose product is 12 and sum is 7 are 3 and 4.",
+    "difficulty_level": "Medium",
+    "topic": "Algebra",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "If f(x) = x^2 - 6x + 8, for what value of x does f(x) = 0?",
+    "type": "RB",
+    "choices": ["2", "4", "3", "6"],
+    "correct_answer": "4",
+    "answer_explanation": "Factor f(x) as (x - 2)(x - 4). Setting f(x) = 0 gives the solutions x = 2 and x = 4.",
+    "difficulty_level": "Medium",
+    "topic": "Quadratic Equations",
+    "reference": "SAT Math Section"
+  },
+  {
+    "question": "The function f(x) = x^2 - 4x + 3 has a minimum value at x =",
+    "type": "RB",
+    "choices": ["1", "2", "3", "4"],
+    "correct_answer": "2",
+    "answer_explanation": "The vertex of a quadratic function in the form ax^2 + bx + c is located at x = -b/2a. Here, b = -4 and a = 1, so the vertex is at x = 2.",
+    "difficulty_level": "Medium",
+    "topic": "Functions",
+    "reference": "SAT Math Section"
+  }
+]
+

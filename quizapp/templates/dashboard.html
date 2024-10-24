@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Your Quiz Progress</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Quiz</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for attempt in quiz_attempts %}
+        <tr>
+            <td>{{ attempt.quiz.title }}</td>
+            <td>{{ attempt.score }}%</td>
+            <td>{{ attempt.completed_at|date:"F d, Y H:i" }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

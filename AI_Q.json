@@ -1,0 +1,273 @@
+[
+  {
+    "question": "What does AI stand for?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Artificial Intelligence",
+    "answer_explanation": "AI stands for Artificial Intelligence, which refers to machines simulating human intelligence.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "AI is the simulation of human intelligence in machines. (True/False)",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "AI refers to the simulation of human intelligence processes by machines.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "Which of the following are applications of AI?",
+    "type": "CB",
+    "choices": ["Speech Recognition", "Autonomous Driving", "Data Entry", "Image Recognition"],
+    "correct_answer": ["Speech Recognition", "Autonomous Driving", "Image Recognition"],
+    "answer_explanation": "AI is commonly used in areas like speech recognition, autonomous driving, and image processing.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "The term 'Artificial Intelligence' was coined by John McCarthy in 1956. (True/False)",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "John McCarthy coined the term 'Artificial Intelligence' during a conference in 1956.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "Which of the following are key components of AI systems?",
+    "type": "CB",
+    "choices": ["Machine Learning", "Natural Language Processing", "Cloud Computing", "Computer Vision"],
+    "correct_answer": ["Machine Learning", "Natural Language Processing", "Computer Vision"],
+    "answer_explanation": "Key components of AI include machine learning, natural language processing, and computer vision.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "In AI, what does 'ML' stand for?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Machine Learning",
+    "answer_explanation": "'ML' stands for Machine Learning, which is a subset of AI focused on data-driven learning.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "AI can be divided into narrow AI and general AI. (True/False)",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Narrow AI is designed for specific tasks, while General AI has broader capabilities like humans.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "Select the areas where AI can improve human activities.",
+    "type": "CB",
+    "choices": ["Healthcare", "Education", "Manufacturing", "Shopping"],
+    "correct_answer": ["Healthcare", "Education", "Manufacturing"],
+    "answer_explanation": "AI is significantly transforming industries like healthcare, education, and manufacturing.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "AI can only perform tasks for which it has been explicitly programmed. (True/False)",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "False",
+    "answer_explanation": "With machine learning, AI can learn from data and perform tasks it wasn't explicitly programmed for.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "What is the technique in AI that allows systems to learn from experience and improve over time?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Machine Learning",
+    "answer_explanation": "Machine Learning allows AI systems to improve based on experience and data.",
+    "difficulty_level": "easy",
+    "topic": "Introduction to AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "Which subfield of AI deals with the ability of machines to learn from data?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Machine Learning",
+    "answer_explanation": "Machine Learning is the field of AI focused on teaching machines to learn from data and improve over time.",
+    "difficulty_level": "easy",
+    "topic": "Machine Learning",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-machine-learning"
+  },
+  {
+    "question": "Which of the following are tasks performed by Natural Language Processing (NLP)?",
+    "type": "CB",
+    "choices": ["Speech Recognition", "Text Translation", "Image Classification", "Sentiment Analysis"],
+    "correct_answer": ["Speech Recognition", "Text Translation", "Sentiment Analysis"],
+    "answer_explanation": "NLP involves tasks like speech recognition, text translation, and sentiment analysis.",
+    "difficulty_level": "easy",
+    "topic": "Natural Language Processing",
+    "reference": "https://www.ibm.com/cloud/learn/natural-language-processing"
+  },
+  {
+    "question": "True or False: AI can currently perform any intellectual task that a human can do.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "False",
+    "answer_explanation": "AI has not yet achieved general intelligence and cannot perform all tasks that a human can.",
+    "difficulty_level": "easy",
+    "topic": "General AI",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "What does 'NLP' stand for in AI?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Natural Language Processing",
+    "answer_explanation": "NLP stands for Natural Language Processing, a branch of AI focused on human language.",
+    "difficulty_level": "easy",
+    "topic": "Natural Language Processing",
+    "reference": "https://www.ibm.com/cloud/learn/natural-language-processing"
+  },
+  {
+    "question": "Which of the following are key characteristics of AI?",
+    "type": "CB",
+    "choices": ["Learning", "Reasoning", "Problem Solving", "Data Entry"],
+    "correct_answer": ["Learning", "Reasoning", "Problem Solving"],
+    "answer_explanation": "AI is defined by its ability to learn, reason, and solve problems.",
+    "difficulty_level": "easy",
+    "topic": "AI Characteristics",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+  },
+  {
+    "question": "True or False: Machine Learning models require data to improve their performance.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Machine learning relies on data to improve the accuracy of its models.",
+    "difficulty_level": "easy",
+    "topic": "Machine Learning",
+    "reference": "https://www.ibm.com/cloud/learn/what-is-machine-learning"
+  },
+  {
+    "question": "What type of AI technology powers virtual assistants like Siri and Alexa?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Natural Language Processing",
+    "answer_explanation": "Virtual assistants use Natural Language Processing (NLP) to understand and respond to user requests.",
+    "difficulty_level": "easy",
+    "topic": "Virtual Assistants",
+    "reference": "https://www.ibm.com/cloud/learn/natural-language-processing"
+  },
+  {
+    "question": "Which of the following are examples of unsupervised learning techniques?",
+    "type": "CB",
+    "choices": ["Clustering", "Classification", "Reinforcement Learning", "Dimensionality Reduction"],
+    "correct_answer": ["Clustering", "Dimensionality Reduction"],
+    "answer_explanation": "Clustering and dimensionality reduction are examples of unsupervised learning techniques.",
+    "difficulty_level": "medium",
+    "topic": "Machine Learning",
+    "reference": "https://www.ibm.com/cloud/learn/unsupervised-learning"
+  },
+  {
+    "question": "True or False: Reinforcement Learning is a type of unsupervised learning.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "False",
+    "answer_explanation": "Reinforcement Learning is a different approach where an agent learns by interacting with its environment.",
+    "difficulty_level": "medium",
+    "topic": "Reinforcement Learning",
+    "reference": "https://www.ibm.com/cloud/learn/reinforcement-learning"
+  },
+  {
+    "question": "What is the technique used by AI to make decisions in real-time by learning through rewards and penalties?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Reinforcement Learning",
+    "answer_explanation": "Reinforcement Learning teaches AI to make decisions through a reward/penalty system based on its actions.",
+    "difficulty_level": "medium",
+    "topic": "Reinforcement Learning",
+    "reference": "https://www.ibm.com/cloud/learn/reinforcement-learning"
+  },
+  {
+    "question": "Which of the following are real-world applications of computer vision?",
+    "type": "CB",
+    "choices": ["Facial Recognition", "Image Classification", "Speech Recognition", "Object Detection"],
+    "correct_answer": ["Facial Recognition", "Image Classification", "Object Detection"],
+    "answer_explanation": "Computer vision is widely used for facial recognition, image classification, and object detection.",
+    "difficulty_level": "easy",
+    "topic": "Computer Vision",
+    "reference": "https://www.ibm.com/cloud/learn/computer-vision"
+  },
+  {
+    "question": "True or False: Supervised learning models are trained on labeled data.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Supervised learning models use labeled data for training and prediction.",
+    "difficulty_level": "easy",
+    "topic": "Supervised Learning",
+    "reference": "https://www.ibm.com/cloud/learn/supervised-learning"
+  },
+  {
+    "question": "Which subfield of AI involves the creation of systems that attempt to replicate the structure and function of the human brain?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Neural Networks",
+    "answer_explanation": "Neural networks are designed to mimic the structure of the human brain in order to learn patterns.",
+    "difficulty_level": "medium",
+    "topic": "Neural Networks",
+    "reference": "https://www.ibm.com/cloud/learn/neural-networks"
+  },
+  {
+    "question": "Which of the following are types of neural networks?",
+    "type": "CB",
+    "choices": ["Convolutional Neural Networks", "Recurrent Neural Networks", "Support Vector Machines", "Random Forests"],
+    "correct_answer": ["Convolutional Neural Networks", "Recurrent Neural Networks"],
+    "answer_explanation": "Convolutional and recurrent neural networks are types of neural networks used for deep learning tasks.",
+    "difficulty_level": "medium",
+    "topic": "Neural Networks",
+    "reference": "https://www.ibm.com/cloud/learn/neural-networks"
+  },
+  {
+    "question": "True or False: Artificial Neural Networks are inspired by the human brain.",
+    "type": "RB",
+    "choices": ["True", "False"],
+    "correct_answer": "True",
+    "answer_explanation": "Artificial neural networks are modeled after the human brain's structure and learning processes.",
+    "difficulty_level": "easy",
+    "topic": "Neural Networks",
+    "reference": "https://www.ibm.com/cloud/learn/neural-networks"
+  },
+  {
+    "question": "What is the main function of a convolutional neural network (CNN)?",
+    "type": "IN",
+    "choices": "",
+    "correct_answer": "Image Processing",
+    "answer_explanation": "Convolutional Neural Networks (CNNs) are primarily used for tasks related to image and video processing.",
+    "difficulty_level": "medium",
+    "topic": "Neural Networks",
+    "reference": "https://www.ibm.com/cloud/learn/convolutional-neural-networks"
+  },
+  {
+    "question": "Which of the following AI models is used for handling sequential data such as time series or language modeling?",
+    "type": "CB",
+    "choices": ["Convolutional Neural Networks", "Recurrent Neural Networks", "Decision Trees", "Linear Regression"],
+    "correct_answer": ["Recurrent Neural Networks"],
+    "answer_explanation": "Recurrent Neural Networks (RNNs) are designed for handling sequential data such as time series and natural language.",
+    "difficulty_level": "medium",
+    "topic": "Neural Networks",
+    "reference": "https://www.ibm.com/cloud/learn/recurrent-neural-networks"
+  }
+
+]

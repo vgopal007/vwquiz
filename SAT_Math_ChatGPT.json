@@ -1,0 +1,1393 @@
+[
+    {
+        "question": "The sum of the angles in a triangle is always 180 degrees.",
+        "type": "RB",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "correct_answer": "True",
+        "answer_explanation": "The sum of interior angles in any triangle is always 180 degrees.",
+        "difficulty_level": "Easy",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "A linear equation has the form y = mx + b, where m represents the slope. If m = 0, the line is:",
+        "type": "RB",
+        "choices": [
+            "Vertical",
+            "Horizontal",
+            "Diagonal",
+            "Undefined"
+        ],
+        "correct_answer": "Horizontal",
+        "answer_explanation": "When the slope is 0, the line is horizontal.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The area of a circle is given by πr^2.",
+        "type": "RB",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "correct_answer": "True",
+        "answer_explanation": "This is the standard formula for the area of a circle.",
+        "difficulty_level": "Easy",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is the solution to the equation x^2 = 16?",
+        "type": "RB",
+        "choices": [
+            "x = 4",
+            "x = -4",
+            "x = 4 or -4",
+            "x = 0"
+        ],
+        "correct_answer": "x = 4 or -4",
+        "answer_explanation": "The square root of 16 can be either positive or negative.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "In the equation y = 2x + 3, what is the slope?",
+        "type": "RB",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "-2"
+        ],
+        "correct_answer": "2",
+        "answer_explanation": "In y = mx + b, m represents the slope.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The quadratic formula is used to solve equations of the form ax^2 + bx + c = 0. What is the quadratic formula?",
+        "type": "RB",
+        "choices": [
+            "(-b ± √(b^2 - 4ac)) / 2a",
+            "(-b ± 2ac) / a",
+            "(b ± √(b^2 + 4ac)) / 2a",
+            "(-a ± √(a^2 - 4bc)) / 2b"
+        ],
+        "correct_answer": "(-b ± √(b^2 - 4ac)) / 2a",
+        "answer_explanation": "This is the correct form of the quadratic formula.",
+        "difficulty_level": "Hard",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of sin(90°)?",
+        "type": "RB",
+        "choices": [
+            "0",
+            "1",
+            "0.5",
+            "-1"
+        ],
+        "correct_answer": "1",
+        "answer_explanation": "sin(90°) is always equal to 1.",
+        "difficulty_level": "Medium",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the radius of a circle is doubled, how does the area of the circle change?",
+        "type": "RB",
+        "choices": [
+            "It doubles",
+            "It triples",
+            "It quadruples",
+            "It remains the same"
+        ],
+        "correct_answer": "It quadruples",
+        "answer_explanation": "Since area = πr^2, doubling the radius increases the area by a factor of 4.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following represents a Pythagorean triple?",
+        "type": "RB",
+        "choices": [
+            "3, 4, 5",
+            "4, 5, 6",
+            "6, 8, 11",
+            "8, 10, 13"
+        ],
+        "correct_answer": "3, 4, 5",
+        "answer_explanation": "A Pythagorean triple satisfies a^2 + b^2 = c^2. 3^2 + 4^2 = 9 + 16 = 25, so 3, 4, 5 is a Pythagorean triple.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The distance formula between two points (x1, y1) and (x2, y2) is:",
+        "type": "RB",
+        "choices": [
+            "√((x2 - x1)^2 + (y2 - y1)^2)",
+            "√((x1 - x2)^2 + (y2 - y1)^2)",
+            "(x2 - x1) + (y2 - y1)",
+            "(x1 + x2) + (y1 + y2)"
+        ],
+        "correct_answer": "√((x2 - x1)^2 + (y2 - y1)^2)",
+        "answer_explanation": "This is the standard formula for the distance between two points in a coordinate plane.",
+        "difficulty_level": "Medium",
+        "topic": "Coordinate Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of cos(0°)?",
+        "type": "RB",
+        "choices": [
+            "0",
+            "1",
+            "-1",
+            "Undefined"
+        ],
+        "correct_answer": "1",
+        "answer_explanation": "cos(0°) is equal to 1.",
+        "difficulty_level": "Medium",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If a line has a slope of -3, which of the following lines is perpendicular to it?",
+        "type": "RB",
+        "choices": [
+            "y = 1/3x + 1",
+            "y = 3x + 1",
+            "y = -3x + 2",
+            "y = 1/9x - 4"
+        ],
+        "correct_answer": "y = 1/3x + 1",
+        "answer_explanation": "Perpendicular lines have slopes that are negative reciprocals of each other. The negative reciprocal of -3 is 1/3.",
+        "difficulty_level": "Hard",
+        "topic": "Coordinate Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is the value of π to two decimal places?",
+        "type": "RB",
+        "choices": [
+            "3.14",
+            "3.15",
+            "3.16",
+            "3.13"
+        ],
+        "correct_answer": "3.14",
+        "answer_explanation": "The approximate value of π to two decimal places is 3.14.",
+        "difficulty_level": "Easy",
+        "topic": "Number Theory",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the sum of the interior angles of a hexagon?",
+        "type": "RB",
+        "choices": [
+            "360°",
+            "540°",
+            "720°",
+            "1080°"
+        ],
+        "correct_answer": "720°",
+        "answer_explanation": "The sum of interior angles of an n-sided polygon is (n-2) × 180°. For a hexagon (n = 6), the sum is 4 × 180° = 720°.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If x^2 = 25, what is the value of x?",
+        "type": "RB",
+        "choices": [
+            "5",
+            "-5",
+            "5 or -5",
+            "0"
+        ],
+        "correct_answer": "5 or -5",
+        "answer_explanation": "Both positive and negative square roots are solutions: x = 5 or -5.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of tan(45°)?",
+        "type": "RB",
+        "choices": [
+            "0",
+            "1",
+            "√2",
+            "Undefined"
+        ],
+        "correct_answer": "1",
+        "answer_explanation": "The value of tan(45°) is 1.",
+        "difficulty_level": "Medium",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If a = 3 and b = 4, what is the value of a^2 + b^2?",
+        "type": "RB",
+        "choices": [
+            "5",
+            "9",
+            "16",
+            "25"
+        ],
+        "correct_answer": "25",
+        "answer_explanation": "a^2 + b^2 = 3^2 + 4^2 = 9 + 16 = 25.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is equivalent to 5(2x + 3)?",
+        "type": "RB",
+        "choices": [
+            "10x + 3",
+            "10x + 15",
+            "2x + 15",
+            "x + 15"
+        ],
+        "correct_answer": "10x + 15",
+        "answer_explanation": "Distribute the 5 to both terms: 5(2x) + 5(3) = 10x + 15.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the perimeter of a square is 20, what is the length of one side?",
+        "type": "RB",
+        "choices": [
+            "4",
+            "5",
+            "6",
+            "10"
+        ],
+        "correct_answer": "5",
+        "answer_explanation": "The perimeter of a square is 4 times the side length. So, 4s = 20, and s = 5.",
+        "difficulty_level": "Easy",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is a factor of x^2 - 9?",
+        "type": "RB",
+        "choices": [
+            "(x + 3)",
+            "(x - 3)",
+            "(x + 3)(x - 3)",
+            "None of the above"
+        ],
+        "correct_answer": "(x + 3)(x - 3)",
+        "answer_explanation": "x^2 - 9 is a difference of squares, factored as (x + 3)(x - 3).",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If y = 2x + 1 and x = 3, what is the value of y?",
+        "type": "RB",
+        "choices": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "correct_answer": "7",
+        "answer_explanation": "Substitute x = 3 into the equation: y = 2(3) + 1 = 7.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The median of the data set {1, 3, 3, 6, 7, 8, 9} is:",
+        "type": "RB",
+        "choices": [
+            "6",
+            "7",
+            "3",
+            "8"
+        ],
+        "correct_answer": "6",
+        "answer_explanation": "The median is the middle value when the numbers are in order, which is 6.",
+        "difficulty_level": "Medium",
+        "topic": "Statistics",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the slope of a line is -2 and the y-intercept is 3, which of the following is the equation of the line?",
+        "type": "RB",
+        "choices": [
+            "y = -2x + 3",
+            "y = 2x + 3",
+            "y = -2x - 3",
+            "y = 3x - 2"
+        ],
+        "correct_answer": "y = -2x + 3",
+        "answer_explanation": "The slope-intercept form is y = mx + b, where m is the slope and b is the y-intercept.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is equivalent to log(100)?",
+        "type": "RB",
+        "choices": [
+            "2",
+            "3",
+            "10",
+            "4"
+        ],
+        "correct_answer": "2",
+        "answer_explanation": "log(100) is equal to 2 because 10^2 = 100.",
+        "difficulty_level": "Medium",
+        "topic": "Logarithms",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the side length of a cube is 5, what is its volume?",
+        "type": "RB",
+        "choices": [
+            "25",
+            "50",
+            "125",
+            "150"
+        ],
+        "correct_answer": "125",
+        "answer_explanation": "The volume of a cube is given by side^3, so 5^3 = 125.",
+        "difficulty_level": "Easy",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of √(49)?",
+        "type": "RB",
+        "choices": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "correct_answer": "7",
+        "answer_explanation": "The square root of 49 is 7 because 7^2 = 49.",
+        "difficulty_level": "Easy",
+        "topic": "Number Theory",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The equation y = x^2 represents which of the following shapes?",
+        "type": "RB",
+        "choices": [
+            "Circle",
+            "Parabola",
+            "Line",
+            "Ellipse"
+        ],
+        "correct_answer": "Parabola",
+        "answer_explanation": "The equation y = x^2 is the standard form of a parabola.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is a solution to the equation 2x - 5 = 7?",
+        "type": "RB",
+        "choices": [
+            "x = 1",
+            "x = 6",
+            "x = 4",
+            "x = -1"
+        ],
+        "correct_answer": "x = 6",
+        "answer_explanation": "Solving 2x - 5 = 7: 2x = 12, so x = 6.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the perimeter of a rectangle with a length of 8 and a width of 4?",
+        "type": "RB",
+        "choices": [
+            "12",
+            "24",
+            "32",
+            "48"
+        ],
+        "correct_answer": "24",
+        "answer_explanation": "The perimeter of a rectangle is 2(length + width) = 2(8 + 4) = 24.",
+        "difficulty_level": "Easy",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If f(x) = 3x + 2, what is the value of f(4)?",
+        "type": "RB",
+        "choices": [
+            "12",
+            "14",
+            "16",
+            "18"
+        ],
+        "correct_answer": "14",
+        "answer_explanation": "Substitute x = 4 into the function: f(4) = 3(4) + 2 = 12 + 2 = 14.",
+        "difficulty_level": "Medium",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following represents a function?",
+        "type": "RB",
+        "choices": [
+            "y = x^2",
+            "x = y^2",
+            "y = ±x",
+            "x + y = 1"
+        ],
+        "correct_answer": "y = x^2",
+        "answer_explanation": "y = x^2 is a function because each x has exactly one y-value.",
+        "difficulty_level": "Medium",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the slope of the line that passes through the points (2, 3) and (4, 7)?",
+        "type": "RB",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "2",
+        "answer_explanation": "The slope is calculated as (7 - 3) / (4 - 2) = 4 / 2 = 2.",
+        "difficulty_level": "Medium",
+        "topic": "Coordinate Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the least common multiple (LCM) of 6 and 8?",
+        "type": "RB",
+        "choices": [
+            "12",
+            "18",
+            "24",
+            "48"
+        ],
+        "correct_answer": "24",
+        "answer_explanation": "The LCM of 6 and 8 is 24, the smallest number divisible by both 6 and 8.",
+        "difficulty_level": "Medium",
+        "topic": "Number Theory",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If f(x) = x^2 - 4x + 3, what is the value of f(2)?",
+        "type": "RB",
+        "choices": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_answer": "3",
+        "answer_explanation": "Substitute x = 2 into the function: f(2) = 2^2 - 4(2) + 3 = 4 - 8 + 3 = -1 + 3 = 3.",
+        "difficulty_level": "Medium",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the distance between the points (1, 2) and (4, 6)?",
+        "type": "RB",
+        "choices": [
+            "3",
+            "5",
+            "6",
+            "7"
+        ],
+        "correct_answer": "5",
+        "answer_explanation": "Use the distance formula: √((4 - 1)^2 + (6 - 2)^2) = √(9 + 16) = √25 = 5.",
+        "difficulty_level": "Medium",
+        "topic": "Coordinate Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of 3^3?",
+        "type": "RB",
+        "choices": [
+            "6",
+            "9",
+            "27",
+            "81"
+        ],
+        "correct_answer": "27",
+        "answer_explanation": "3^3 = 3 × 3 × 3 = 27.",
+        "difficulty_level": "Easy",
+        "topic": "Exponents",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the y-intercept of the equation y = -2x + 5?",
+        "type": "RB",
+        "choices": [
+            "-2",
+            "0",
+            "2",
+            "5"
+        ],
+        "correct_answer": "5",
+        "answer_explanation": "In y = mx + b, the y-intercept is b, which is 5 in this case.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is the equation of a circle with center (0, 0) and radius 4?",
+        "type": "RB",
+        "choices": [
+            "x^2 + y^2 = 16",
+            "x^2 + y^2 = 4",
+            "x + y = 16",
+            "x^2 - y^2 = 16"
+        ],
+        "correct_answer": "x^2 + y^2 = 16",
+        "answer_explanation": "The equation of a circle with center (0, 0) and radius r is x^2 + y^2 = r^2. Since the radius is 4, r^2 = 16.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the length of a rectangle is doubled and the width is halved, how does the area change?",
+        "type": "RB",
+        "choices": [
+            "It is halved",
+            "It is doubled",
+            "It remains the same",
+            "It is quadrupled"
+        ],
+        "correct_answer": "It remains the same",
+        "answer_explanation": "The area of a rectangle is length × width. Doubling the length and halving the width keeps the area unchanged.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the volume of a cube is 64, what is the length of one side?",
+        "type": "RB",
+        "choices": [
+            "2",
+            "4",
+            "6",
+            "8"
+        ],
+        "correct_answer": "4",
+        "answer_explanation": "The volume of a cube is side^3. If side^3 = 64, then the side length is 4 because 4^3 = 64.",
+        "difficulty_level": "Easy",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is the greatest common divisor (GCD) of 18 and 24?",
+        "type": "RB",
+        "choices": [
+            "2",
+            "3",
+            "6",
+            "12"
+        ],
+        "correct_answer": "6",
+        "answer_explanation": "The GCD of 18 and 24 is 6, as it is the largest number that divides both evenly.",
+        "difficulty_level": "Medium",
+        "topic": "Number Theory",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If x = -2, what is the value of |x|?",
+        "type": "RB",
+        "choices": [
+            "-2",
+            "0",
+            "2",
+            "4"
+        ],
+        "correct_answer": "2",
+        "answer_explanation": "The absolute value of -2 is 2.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the sum of three consecutive integers is 72, what is the value of the middle integer?",
+        "type": "RB",
+        "choices": [
+            "23",
+            "24",
+            "25",
+            "26"
+        ],
+        "correct_answer": "24",
+        "answer_explanation": "Let the integers be x, x+1, and x+2. Their sum is 3x + 3 = 72. Solving for x, we get x = 23, so the middle integer is 24.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of 2^5?",
+        "type": "RB",
+        "choices": [
+            "16",
+            "32",
+            "64",
+            "128"
+        ],
+        "correct_answer": "32",
+        "answer_explanation": "2^5 = 2 × 2 × 2 × 2 × 2 = 32.",
+        "difficulty_level": "Easy",
+        "topic": "Exponents",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the equation of a line that is parallel to y = 3x + 1 and passes through the point (0, -2)?",
+        "type": "RB",
+        "choices": [
+            "y = 3x - 2",
+            "y = 3x + 2",
+            "y = -3x - 2",
+            "y = 1/3x - 2"
+        ],
+        "correct_answer": "y = 3x - 2",
+        "answer_explanation": "Parallel lines have the same slope. Since the slope is 3 and the line passes through (0, -2), the equation is y = 3x - 2.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of x if 3x + 5 = 20?",
+        "type": "RB",
+        "choices": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correct_answer": "5",
+        "answer_explanation": "Solve 3x + 5 = 20: 3x = 15, so x = 5.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the sum of the first 5 prime numbers?",
+        "type": "RB",
+        "choices": [
+            "28",
+            "26",
+            "18",
+            "15"
+        ],
+        "correct_answer": "28",
+        "answer_explanation": "The first 5 prime numbers are 2, 3, 5, 7, and 11. Their sum is 2 + 3 + 5 + 7 + 11 = 28.",
+        "difficulty_level": "Medium",
+        "topic": "Number Theory",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the solution to the equation 2x - 7 = 3?",
+        "type": "RB",
+        "choices": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "5",
+        "answer_explanation": "Solve for x: 2x = 10, so x = 5.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the area of a triangle with a base of 6 and a height of 4?",
+        "type": "RB",
+        "choices": [
+            "8",
+            "10",
+            "12",
+            "24"
+        ],
+        "correct_answer": "12",
+        "answer_explanation": "The area of a triangle is 1/2 × base × height = 1/2 × 6 × 4 = 12.",
+        "difficulty_level": "Easy",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If 4x + 3 = 11, what is the value of x?",
+        "type": "RB",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "2",
+        "answer_explanation": "Solve for x: 4x = 8, so x = 2.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is a factor of x^2 - 4x - 5?",
+        "type": "RB",
+        "choices": [
+            "(x - 5)",
+            "(x + 5)",
+            "(x - 1)",
+            "None of the above"
+        ],
+        "correct_answer": "(x - 5)",
+        "answer_explanation": "Factoring x^2 - 4x - 5 gives (x - 5)(x + 1).",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If a car travels 60 miles in 1.5 hours, what is the car's speed in miles per hour?",
+        "type": "RB",
+        "choices": [
+            "30",
+            "40",
+            "50",
+            "60"
+        ],
+        "correct_answer": "40",
+        "answer_explanation": "Speed = distance/time = 60 miles / 1.5 hours = 40 miles per hour.",
+        "difficulty_level": "Medium",
+        "topic": "Word Problems",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following represents the solution to |x - 3| = 5?",
+        "type": "RB",
+        "choices": [
+            "x = 8",
+            "x = -8",
+            "x = 3",
+            "x = 8 or x = -2"
+        ],
+        "correct_answer": "x = 8 or x = -2",
+        "answer_explanation": "The absolute value equation |x - 3| = 5 has two solutions: x - 3 = 5 (x = 8) or x - 3 = -5 (x = -2).",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of cos(0°)?",
+        "type": "RB",
+        "choices": [
+            "0",
+            "1",
+            "-1",
+            "Undefined"
+        ],
+        "correct_answer": "1",
+        "answer_explanation": "The cosine of 0° is 1.",
+        "difficulty_level": "Easy",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If x^2 = 36, what are the possible values of x?",
+        "type": "RB",
+        "choices": [
+            "x = 6",
+            "x = -6",
+            "x = ±6",
+            "x = 0"
+        ],
+        "correct_answer": "x = ±6",
+        "answer_explanation": "The equation x^2 = 36 has two solutions: x = 6 and x = -6.",
+        "difficulty_level": "Easy",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the sum of two numbers is 12 and their difference is 4, what are the numbers?",
+        "type": "RB",
+        "choices": [
+            "4 and 8",
+            "5 and 7",
+            "6 and 6",
+            "2 and 10"
+        ],
+        "correct_answer": "4 and 8",
+        "answer_explanation": "Let the numbers be x and y. Then x + y = 12 and x - y = 4. Solving these equations gives x = 8 and y = 4.",
+        "difficulty_level": "Medium",
+        "topic": "Word Problems",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the circumference of a circle is 12π, what is the radius of the circle?",
+        "type": "RB",
+        "choices": [
+            "3",
+            "6",
+            "12",
+            "24"
+        ],
+        "correct_answer": "6",
+        "answer_explanation": "The circumference of a circle is 2πr, so 2πr = 12π. Solving for r, r = 6.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the probability of rolling a sum of 7 on two six-sided dice?",
+        "type": "RB",
+        "choices": [
+            "1/6",
+            "1/12",
+            "1/36",
+            "1/18"
+        ],
+        "correct_answer": "1/6",
+        "answer_explanation": "There are 6 ways to roll a 7 out of 36 possible combinations, so the probability is 6/36 = 1/6.",
+        "difficulty_level": "Medium",
+        "topic": "Probability",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is the equation of a line with a slope of 1/2 and a y-intercept of 3?",
+        "type": "RB",
+        "choices": [
+            "y = 1/2x + 3",
+            "y = 2x + 3",
+            "y = -1/2x + 3",
+            "y = 1/2x - 3"
+        ],
+        "correct_answer": "y = 1/2x + 3",
+        "answer_explanation": "The slope-intercept form of a line is y = mx + b, where m is the slope and b is the y-intercept.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the ratio of boys to girls in a class is 2:3, and there are 30 students total, how many boys are there?",
+        "type": "RB",
+        "choices": [
+            "10",
+            "12",
+            "15",
+            "18"
+        ],
+        "correct_answer": "12",
+        "answer_explanation": "The ratio 2:3 means there are 2 boys for every 5 students. Therefore, the number of boys is (2/5) × 30 = 12.",
+        "difficulty_level": "Medium",
+        "topic": "Ratios",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is the prime factorization of 84?",
+        "type": "RB",
+        "choices": [
+            "2^2 × 3 × 7",
+            "2 × 3^2 × 7",
+            "2^2 × 3 × 5",
+            "2 × 2 × 3 × 7"
+        ],
+        "correct_answer": "2^2 × 3 × 7",
+        "answer_explanation": "The prime factorization of 84 is 2 × 2 × 3 × 7 = 2^2 × 3 × 7.",
+        "difficulty_level": "Medium",
+        "topic": "Number Theory",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the function f(x) = 2x - 5, what is f(3)?",
+        "type": "RB",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "1",
+        "answer_explanation": "Substitute x = 3 into the function: f(3) = 2(3) - 5 = 6 - 5 = 1.",
+        "difficulty_level": "Easy",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the quadratic equation x^2 - 6x + 9 = 0 is factored, what are the solutions for x?",
+        "type": "RB",
+        "choices": [
+            "x = 3",
+            "x = -3",
+            "x = ±3",
+            "No real solutions"
+        ],
+        "correct_answer": "x = 3",
+        "answer_explanation": "The equation factors to (x - 3)^2 = 0, giving x = 3.",
+        "difficulty_level": "Medium",
+        "topic": "Quadratic Equations",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "A rectangle has a length that is twice its width. If the perimeter is 36, what is the width of the rectangle?",
+        "type": "RB",
+        "choices": [
+            "4",
+            "6",
+            "8",
+            "12"
+        ],
+        "correct_answer": "6",
+        "answer_explanation": "Let the width be x and the length be 2x. The perimeter is 2(x + 2x) = 36, solving for x gives x = 6.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If x^3 - 8 = 0, what is the value of x?",
+        "type": "RB",
+        "choices": [
+            "2",
+            "-2",
+            "4",
+            "8"
+        ],
+        "correct_answer": "2",
+        "answer_explanation": "x^3 = 8, so x = 2.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The function f(x) = 3x + 7 is increasing by how much for each unit increase in x?",
+        "type": "RB",
+        "choices": [
+            "3",
+            "7",
+            "10",
+            "1"
+        ],
+        "correct_answer": "3",
+        "answer_explanation": "The coefficient of x in f(x) = 3x + 7 is 3, meaning the function increases by 3 for each unit increase in x.",
+        "difficulty_level": "Medium",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the length of the diagonal of a square with side length 10?",
+        "type": "RB",
+        "choices": [
+            "10",
+            "10√2",
+            "20",
+            "5√2"
+        ],
+        "correct_answer": "10√2",
+        "answer_explanation": "The diagonal of a square is given by side length × √2, so the diagonal is 10√2.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "A solution to the system of equations y = 2x - 1 and y = -x + 4 is:",
+        "type": "RB",
+        "choices": [
+            "x = 1, y = 1",
+            "x = 2, y = 3",
+            "x = 3, y = 5",
+            "x = 4, y = 7"
+        ],
+        "correct_answer": "x = 2, y = 3",
+        "answer_explanation": "Substitute y = 2x - 1 into y = -x + 4, solving gives x = 2, y = 3.",
+        "difficulty_level": "Medium",
+        "topic": "Systems of Equations",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If sin θ = 1/2 and 0° ≤ θ ≤ 180°, what are the possible values of θ?",
+        "type": "RB",
+        "choices": [
+            "30° and 150°",
+            "45° and 135°",
+            "60° and 120°",
+            "90° and 180°"
+        ],
+        "correct_answer": "30° and 150°",
+        "answer_explanation": "sin θ = 1/2 at θ = 30° and 150° in the given range.",
+        "difficulty_level": "Medium",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The sum of the interior angles of a polygon is 720°. How many sides does the polygon have?",
+        "type": "RB",
+        "choices": [
+            "6",
+            "8",
+            "10",
+            "12"
+        ],
+        "correct_answer": "6",
+        "answer_explanation": "The sum of the interior angles of an n-sided polygon is (n - 2) × 180°. Solving (n - 2) × 180° = 720° gives n = 6.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the solution to the inequality 2x - 5 > 7?",
+        "type": "RB",
+        "choices": [
+            "x > 2",
+            "x > 6",
+            "x > 5",
+            "x > 10"
+        ],
+        "correct_answer": "x > 6",
+        "answer_explanation": "Solving the inequality: 2x > 12, so x > 6.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the standard deviation of the following data set: {5, 10, 15, 20, 25}?",
+        "type": "RB",
+        "choices": [
+            "5",
+            "10",
+            "7.07",
+            "12.25"
+        ],
+        "correct_answer": "7.07",
+        "answer_explanation": "The standard deviation is calculated as the square root of the variance, which for this data set is approximately 7.07.",
+        "difficulty_level": "Hard",
+        "topic": "Statistics",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "A right triangle has legs of length 6 and 8. What is the length of the hypotenuse?",
+        "type": "RB",
+        "choices": [
+            "7",
+            "9",
+            "10",
+            "12"
+        ],
+        "correct_answer": "10",
+        "answer_explanation": "Using the Pythagorean theorem: 6^2 + 8^2 = 36 + 64 = 100, so the hypotenuse is √100 = 10.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If 5x - 3 ≤ 12, what is the range of possible values for x?",
+        "type": "RB",
+        "choices": [
+            "x ≤ 3",
+            "x ≥ 2",
+            "x ≤ 5",
+            "x ≤ 10"
+        ],
+        "correct_answer": "x ≤ 3",
+        "answer_explanation": "Solve the inequality: 5x ≤ 15, so x ≤ 3.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is the value of cos(π/3)?",
+        "type": "RB",
+        "choices": [
+            "1/2",
+            "√2/2",
+            "0",
+            "-1/2"
+        ],
+        "correct_answer": "1/2",
+        "answer_explanation": "The cosine of π/3 radians (or 60°) is 1/2.",
+        "difficulty_level": "Medium",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If the function g(x) = x^2 - 4x + 4 has a minimum value, what is it?",
+        "type": "RB",
+        "choices": [
+            "0",
+            "2",
+            "4",
+            "-4"
+        ],
+        "correct_answer": "0",
+        "answer_explanation": "The quadratic function g(x) = (x - 2)^2 has a minimum value of 0 when x = 2.",
+        "difficulty_level": "Hard",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the solution to the equation log(x) + log(2) = log(10)?",
+        "type": "RB",
+        "choices": [
+            "x = 2",
+            "x = 5",
+            "x = 10",
+            "x = 20"
+        ],
+        "correct_answer": "x = 5",
+        "answer_explanation": "Using the logarithmic rule log(ab) = log(a) + log(b), we get log(2x) = log(10), so 2x = 10 and x = 5.",
+        "difficulty_level": "Hard",
+        "topic": "Logarithms",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If f(x) = 3x^2 - 4x + 1, what is f(2)?",
+        "type": "RB",
+        "choices": [
+            "5",
+            "7",
+            "9",
+            "11"
+        ],
+        "correct_answer": "5",
+        "answer_explanation": "Substitute x = 2 into the function: f(2) = 3(2^2) - 4(2) + 1 = 12 - 8 + 1 = 5.",
+        "difficulty_level": "Medium",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of the discriminant for the quadratic equation 3x^2 - 4x + 2 = 0?",
+        "type": "RB",
+        "choices": [
+            "-8",
+            "0",
+            "8",
+            "16"
+        ],
+        "correct_answer": "-8",
+        "answer_explanation": "The discriminant is given by b^2 - 4ac. For the equation 3x^2 - 4x + 2 = 0, b = -4, a = 3, and c = 2. The discriminant is (-4)^2 - 4(3)(2) = 16 - 24 = -8.",
+        "difficulty_level": "Hard",
+        "topic": "Quadratics",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of sin(45°)?",
+        "type": "RB",
+        "choices": [
+            "√2/2",
+            "1/2",
+            "√3/2",
+            "1"
+        ],
+        "correct_answer": "√2/2",
+        "answer_explanation": "The sine of 45° is √2/2.",
+        "difficulty_level": "Medium",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If a circle has an area of 36π, what is the radius of the circle?",
+        "type": "RB",
+        "choices": [
+            "3",
+            "6",
+            "9",
+            "12"
+        ],
+        "correct_answer": "6",
+        "answer_explanation": "The area of a circle is πr^2, so if πr^2 = 36π, then r^2 = 36, which gives r = 6.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "A line has the equation y = 2x + 3. What is the slope of a line perpendicular to it?",
+        "type": "RB",
+        "choices": [
+            "-2",
+            "1/2",
+            "-1/2",
+            "2"
+        ],
+        "correct_answer": "-1/2",
+        "answer_explanation": "The slope of a line perpendicular to another is the negative reciprocal of the original slope. The slope of the given line is 2, so the perpendicular slope is -1/2.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If (3, 4) is a solution to the equation 2x + 3y = c, what is the value of c?",
+        "type": "RB",
+        "choices": [
+            "17",
+            "18",
+            "19",
+            "20"
+        ],
+        "correct_answer": "18",
+        "answer_explanation": "Substitute (3, 4) into the equation: 2(3) + 3(4) = c, so 6 + 12 = c, giving c = 18.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "Which of the following is an irrational number?",
+        "type": "RB",
+        "choices": [
+            "√2",
+            "√9",
+            "0.75",
+            "4/5"
+        ],
+        "correct_answer": "√2",
+        "answer_explanation": "The square root of 2 is an irrational number because it cannot be expressed as a simple fraction.",
+        "difficulty_level": "Medium",
+        "topic": "Number Theory",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of log_2(16)?",
+        "type": "RB",
+        "choices": [
+            "2",
+            "4",
+            "8",
+            "16"
+        ],
+        "correct_answer": "4",
+        "answer_explanation": "log_2(16) means 2 raised to what power equals 16. Since 2^4 = 16, log_2(16) = 4.",
+        "difficulty_level": "Medium",
+        "topic": "Logarithms",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If f(x) = x^2 - 4 and g(x) = x + 2, what is f(g(3))?",
+        "type": "RB",
+        "choices": [
+            "-1",
+            "0",
+            "1",
+            "2"
+        ],
+        "correct_answer": "1",
+        "answer_explanation": "First find g(3) = 3 + 2 = 5, then substitute 5 into f(x): f(5) = 5^2 - 4 = 25 - 4 = 21.",
+        "difficulty_level": "Hard",
+        "topic": "Functions",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If a right triangle has legs of length 9 and 12, what is the length of the hypotenuse?",
+        "type": "RB",
+        "choices": [
+            "15",
+            "13",
+            "18",
+            "21"
+        ],
+        "correct_answer": "15",
+        "answer_explanation": "Use the Pythagorean theorem: 9^2 + 12^2 = 81 + 144 = 225, so the hypotenuse is √225 = 15.",
+        "difficulty_level": "Medium",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the slope of the line that passes through the points (1, 2) and (3, 6)?",
+        "type": "RB",
+        "choices": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "2",
+        "answer_explanation": "The slope of a line is given by (y2 - y1) / (x2 - x1). Using the points (1, 2) and (3, 6), the slope is (6 - 2) / (3 - 1) = 4 / 2 = 2.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The expression (x + 3)(x - 3) simplifies to:",
+        "type": "RB",
+        "choices": [
+            "x^2 - 9",
+            "x^2 + 9",
+            "x^2 - 6",
+            "x^2 + 6"
+        ],
+        "correct_answer": "x^2 - 9",
+        "answer_explanation": "This is a difference of squares: (x + 3)(x - 3) = x^2 - 9.",
+        "difficulty_level": "Medium",
+        "topic": "Algebra",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "What is the value of cos(π/2)?",
+        "type": "RB",
+        "choices": [
+            "0",
+            "1",
+            "-1",
+            "Undefined"
+        ],
+        "correct_answer": "0",
+        "answer_explanation": "The cosine of π/2 radians (90°) is 0.",
+        "difficulty_level": "Medium",
+        "topic": "Trigonometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "A cylinder has a height of 10 units and a radius of 3 units. What is its volume?",
+        "type": "RB",
+        "choices": [
+            "90π",
+            "120π",
+            "180π",
+            "210π"
+        ],
+        "correct_answer": "90π",
+        "answer_explanation": "The volume of a cylinder is given by V = πr^2h. Substituting r = 3 and h = 10, we get V = π(3^2)(10) = 90π.",
+        "difficulty_level": "Hard",
+        "topic": "Geometry",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "If log_10(x) = 3, what is the value of x?",
+        "type": "RB",
+        "choices": [
+            "10",
+            "100",
+            "1000",
+            "10000"
+        ],
+        "correct_answer": "1000",
+        "answer_explanation": "log_10(x) = 3 means 10^3 = x, so x = 1000.",
+        "difficulty_level": "Medium",
+        "topic": "Logarithms",
+        "reference": "SAT Math Section"
+    },
+    {
+        "question": "The system of equations y = 2x + 3 and y = -x + 5 has a solution at which point?",
+        "type": "RB",
+        "choices": [
+            "(1, 5)",
+            "(2, 7)",
+            "(3, 6)",
+            "(1, 4)"
+        ],
+        "correct_answer": "(1, 5)",
+        "answer_explanation": "Set the two equations equal to each other: 2x + 3 = -x + 5. Solving for x gives x = 1. Substituting x = 1 into either equation gives y = 5. Therefore, the solution is (1, 5).",
+        "difficulty_level": "Medium",
+        "topic": "Systems of Equations",
+        "reference": "SAT Math Section"
+    }
+]
