@@ -82,15 +82,18 @@ def main():
                 reference = question['reference']
                 answer_explanation = question['answer_explanation']
                 qtype = question['type']
+                if qtype=="TF":
+                    qtype="RB"
                 created_at = date.today()
                 updated_at = date.today()
+                delete_flag=False
    
                 topic_id=check_topic_exists(cursor, qtopic)
                 if not topic_id:
                     print("Adding a new topic to {cat} : ", qtopic)
                     topic_id = generate_uuid()
                     topic_data = (
-                        topic_id, created_at, updated_at, qtopic, subject_id, 0
+                        topic_id, created_at, updated_at, qtopic, subject_id, 0, delete_flag
                         )
                     if dryrun.lower().startswith("n"):
                         insert_topic(cursor, topic_data)
@@ -107,7 +110,6 @@ def main():
                 else:
                     optionstext=question['choices']            
   
-                delete_flag=False
                 qc_passed=False
 
                 question_data = (
