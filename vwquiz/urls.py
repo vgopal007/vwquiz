@@ -19,17 +19,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from quizapp import views
-
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
    path('admin/', admin.site.urls, name = 'Admin'),
-#   path('quizapp/', include('quizapp.urls')),  # Include app-specific URLs
-   # app-level URL patterns follow ...
+#  path('quizapp/', include('quizapp.urls')),  # Include app-specific URLs
+#  app-level URL patterns follow ...
    path('', views.quizapp , name = 'quizapp'),
    path('', views.quiz, name= 'quiz'),
    path('quiz/', views.quiz, name='quiz'),  # Add this line for the 'quiz/' URL
    path('api/get-quiz/', views.get_quiz, name='get_quiz'),
- #  path('quizapp/', views.quiz_view, name= 'quiz_view'),
+ # path('quizapp/', views.quiz_view, name= 'quiz_view'),
    path('', views.next_question, name= 'next_question'),
    path('', views.prev_question, name= 'prev_question'),
    path('', views.goto_question, name= 'goto_question'),
@@ -37,7 +37,10 @@ urlpatterns = [
    path('storeuserresponse/', views.storeuserresponse, name='storeuserresponse'),
    path('', views.storeuserresponse, name='storeuserresponse'),
    path('', views.storeuserresponse, name='storeuserresponse'),
+   path('session_report/<str:session_id>/', views.session_report, name='session_report'),
+   path('update_quiz_session/<str:session_id>/', views.update_quiz_session, name='update_quiz_session'),
    #path('create-quizsession/', views.create_quizsession, name='create_quizsession'),
-
+   path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+   path('register/', views.register, name='register'),
 ]
 

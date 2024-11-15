@@ -1,0 +1,6 @@
+To clone github to your local machine. do the following steps -
+1. Access Github, click on code and then the Code button with Green Background.   Copy the URL of the Github Directory.  For ours, it is https://github.com/ramanis/vwquiz.git
+2. cmd
+3. goto the location where you wish to create a fresh vwquiz folder.
+4. type git clone https://github.com/ramanis/vwquiz.git
+(it will say vwquiz already exists - rename the main vwquiz directory to old for the cloning to create the vquiz parent directory and all subdirecories including quizapp and vwquiz.

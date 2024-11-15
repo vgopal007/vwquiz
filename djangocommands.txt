@@ -1,0 +1,5 @@
+django-admin startproject vwquiz  
+python3 manage.py startapp quizapp
+python manage.py migrate
+python manage.py runserver
+python manage.py createsuperuser

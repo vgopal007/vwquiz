@@ -1,0 +1,559 @@
+1. 
+
+{
+
+"question": "What is the value of sin(x) if cos(x) = 3/5 and x is in the first quadrant?",
+
+"type": "RB",
+
+"choices": ["1/5", "2/5", "3/5", "4/5"],
+
+"correct_answer": "4/5",
+
+"answer_explanation": "Using Pythagorean identity sin^2(x) + cos^2(x) = 1",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+2. 
+
+{
+
+"question": "If tan(x) = 2, what is the value of sec(x)?",
+
+"type": "RB",
+
+"choices": ["√5", "2√5", "5", "2"],
+
+"correct_answer": "√5",
+
+"answer_explanation": "Using identity sec^2(x) = 1 + tan^2(x)",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+3. 
+
+{
+
+"question": "What is the amplitude of y = 3sin(2x)?",
+
+"type": "RB",
+
+"choices": ["1", "2", "3", "6"],
+
+"correct_answer": "3",
+
+"answer_explanation": "Amplitude is coefficient of sine term",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+*Hard Level*
+
+
+
+4. 
+
+{
+
+"question": "If sin(x) = 2cos(x), what is the value of tan(x)?",
+
+"type": "RB",
+
+"choices": ["1", "2", "√2", "1/2"],
+
+"correct_answer": "2",
+
+"answer_explanation": "Using identity tan(x) = sin(x)/cos(x)",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+5. 
+
+{
+
+"question": "What is the period of y = sin(3x/2)?",
+
+"type": "RB",
+
+"choices": ["2π", "4π", "6π", "8π"],
+
+"correct_answer": "4π",
+
+"answer_explanation": "Period is 2π/|coefficient of x|",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+6. 
+
+{
+
+"question": "If sec(x) = 2, what is the value of sin(x)?",
+
+"type": "RB",
+
+"choices": ["1/2", "√3/2", "1", "√2/2"],
+
+"correct_answer": "√3/2",
+
+"answer_explanation": "Using identity sec^2(x) = 1 + tan^2(x)",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+7. 
+
+{
+
+"question": "True or False: sin(x+y) = sin(x)cos(y) + cos(x)sin(y)",
+
+"type": "TF",
+
+"choices": ["True", "False"],
+
+"correct_answer": "True",
+
+"answer_explanation": "Trigonometric identity",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+8. 
+
+{
+
+"question": "What is the value of cos(3π/4)?",
+
+"type": "RB",
+
+"choices": ["-1/√2", "1/√2", "-√2", "√2"],
+
+"correct_answer": "-1/√2",
+
+"answer_explanation": "Using unit circle",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+9. 
+
+{
+
+"question": "If tan(x) = 1/2, what is the value of cot(x)?",
+
+"type": "RB",
+
+"choices": ["-2", "-1/2", "2", "1/2"],
+
+"correct_answer": "2",
+
+"answer_explanation": "Using identity cot(x) = 1/tan(x)",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+10. 
+
+{
+
+"question": "What is the equation of the tangent line to y = sin(x) at x = π/4?",
+
+"type": "RB",
+
+"choices": ["y = x/√2", "y = -x/√2", "y = x√2", "y = -x√2"],
+
+"correct_answer": "y = x/√2",
+
+"answer_explanation": "Using derivative of sine",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+11. 
+
+{
+
+"question": "If sin(x) = 3/5 and cos(x) = 4/5, what is the value of tan(x)?",
+
+"type": "RB",
+
+"choices": ["3/4", "4/3", "3/5", "4/5"],
+
+"correct_answer": "3/4",
+
+"answer_explanation": "Using identity tan(x) = sin(x)/cos(x)",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+12. 
+
+{
+
+"question": "What is the amplitude of y = 2cos(3x)?",
+
+"type": "RB",
+
+"choices": ["1", "2", "3", "6"],
+
+"correct_answer": "2",
+
+"answer_explanation": "Amplitude is coefficient of cosine term",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+13. 
+
+{
+
+"question": "True or False: cos(x+y) = cos(x)cos(y) - sin(x)sin(y)",
+
+"type": "TF",
+
+"choices": ["True", "False"],
+
+"correct_answer": "True",
+
+"answer_explanation": "Trigonometric identity",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+14. 
+
+{
+
+"question": "If sec(x) = 3, what is the value of cos(x)?",
+
+"type": "RB",
+
+"choices": ["1/3", "2/3", "1/2", "3/4"],
+
+"correct_answer": "1/3",
+
+"answer_explanation": "Using identity sec(x) = 1/cos(x)",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+15. 
+
+{
+
+"question": "What is the period of y = sin(2x/3)?",
+
+"type": "RB",
+
+"choices": ["3π", "6π", "9π", "12π"],
+
+"correct_answer": "6π",
+
+"answer_explanation": "Period is 2π/|coefficient of x|",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+16. 
+
+{
+
+"question": "If tan(x) = 5/12, what is the value of sin(x)?",
+
+"type": "RB",
+
+"choices": ["5/13", "12/13", "5/12", "12/5"],
+
+"correct_answer": "5/13",
+
+"answer_explanation": "Using identity tan(x) = sin(x)/cos(x) and Pythagorean identity",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+17. 
+
+{
+
+"question": "What is the equation of the tangent line to y = cos(x) at x = 0?",
+
+"type": "RB",
+
+"choices": ["y = x", "y = -x", "y = 1", "y = -1"],
+
+"correct_answer": "y = 1",
+
+"answer_explanation": "Using derivative of cosine",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+18. 
+
+{
+
+"question": "True or False: sin(2x) = 2sin(x)cos(x)",
+
+"type": "TF",
+
+"choices": ["True", "False"],
+
+"correct_answer": "True",
+
+"answer_explanation": "Trigonometric identity",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+19. 
+
+{
+
+"question": "If cos(x) = 1/3, what is the value of sec(x)?",
+
+"type": "RB",
+
+"choices": ["3", "-3", "1/3", "-1/3"],
+
+"correct_answer": "3",
+
+"answer_explanation": "Using identity sec(x) = 1/cos(x)",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+20. 
+
+{
+
+"question": "What is the amplitude of y = 4sin(2x/5)?",
+
+"type": "RB",
+
+"choices": ["2", "4", "8", "10"],
+
+"correct_answer": "4",
+
+"answer_explanation": "Amplitude is coefficient of sine term",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+21.
+
+{
+
+"question": "If sin(x) = 2/3 and cos(x) = √5/3, what is tan(x)?",
+
+"type": "RB",
+
+"choices": ["2/√5", "√5/2", "2√5/3", "3/√5"],
+
+"correct_answer": "2/√5",
+
+"answer_explanation": "Using identity tan(x) = sin(x)/cos(x)",
+
+"difficulty_level": "Hard",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+22. 
+
+{
+
+"question": "What is the period of y = cos(4x/3)?",
+
+"type": "RB",
+
+"choices": ["3π/2", "3π", "6π", "9π/2"],
+
+"correct_answer": "6π",
+
+"answer_explanation": "Period is 2π/|coefficient of x|",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+23. 
+
+{
+
+"question": "True or False: tan(x) = cot(x) for all x",
+
+"type": "TF",
+
+"choices": ["True", "False"],
+
+"correct_answer": "FalseFalse",
+
+"answer_explanation": "tan(x) ≠ cot(x) for most x",
+
+"difficulty_level": "Medium",
+
+"topic": "Trigonometry",
+
+"reference": "SAT Math Guide"
+
+}
+
+
+
+24. 
+
+{
+
+"question": "If sec(x) = 5/3, what is cos(x)?",
+
+"type": "RB",
+
+"choices": ["3/5", "5/3", "1/3", "3"],

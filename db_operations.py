@@ -25,9 +25,15 @@ def fetch_subject_id(cursor, category):
 def insert_question(cursor, question_data):
     cursor.execute('''
         INSERT INTO quizapp_question (
-            uid, created_at, updated_at, question_type, question, topic, marks,
-            answer_explanation, difficulty_level, reference, source, subject_id
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            uid, created_at, updated_at, question_type, question, topic_id, marks,
+            answer_explanation, difficulty_level, reference, source, subject_id, delete_flag, qc_passed
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', question_data)
-    
-    
+
+def insert_topic(cursor, topic_data):
+    cursor.execute('''
+        INSERT INTO quizapp_topics (
+            uid, created_at, updated_at, topic, subject_id, weight_perc
+            ) VALUES (?, ?, ?, ?, ?, ?)
+        ''', topic_data)
+        
