@@ -33,7 +33,7 @@ def insert_question(cursor, question_data):
 def insert_topic(cursor, topic_data):
     cursor.execute('''
         INSERT INTO quizapp_topics (
-            uid, created_at, updated_at, topic, subject_id, weight_perc
-            ) VALUES (?, ?, ?, ?, ?, ?)
+            uid, created_at, updated_at, topic, subject_id, weight_perc, delete_flag
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
         ''', topic_data)
         

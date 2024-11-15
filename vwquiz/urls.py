@@ -40,7 +40,7 @@ urlpatterns = [
    path('session_report/<str:session_id>/', views.session_report, name='session_report'),
    path('update_quiz_session/<str:session_id>/', views.update_quiz_session, name='update_quiz_session'),
    #path('create-quizsession/', views.create_quizsession, name='create_quizsession'),
-   path('login/', LoginView.as_view(template_name='login.html'), name='login'),
-   path('register/', views.register, name='register'),
+   #path('login/', include('login.urls')),
+   path('', include('login.urls')),
 ]
 

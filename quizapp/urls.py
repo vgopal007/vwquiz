@@ -17,11 +17,7 @@ urlpatterns = [
    path('get_user_response/', views.get_user_response, name='get_user_response'),
    path('storeuserresponse/', views.storeuserresponse, name='storeuserresponse'),
    path('', views.storeuserresponse, name='storeuserresponse'),
-   path('login/', views.login_view, name='login'),  # URL for login page
-   path('register/', views.register_view, name='register'),
-
-  # path('login/', CustomLoginView.as_view(), name='login'),
-   path('logout/', LogoutView.as_view(), name='logout'),
-
+   path('login/', include('login.urls')),
+ 
   ]
 

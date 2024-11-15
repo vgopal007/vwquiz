@@ -65,15 +65,6 @@ class Types(BaseModel):
                 topic_obj.weight_perc = weight_perc
                 #topic_obj.save()
                 
-        """
-        data = []
-        for topic_obj in topic_objs:
-            data.append({
-                'topic': topic_obj.topic,
-                'topic_id':topic_obj.uid
-                'weight_perc': topic_obj.weight_perc,
-            })
-        """
         
         # Validate total weight percentage
         if round(total_weight_perc,0) != 100:
