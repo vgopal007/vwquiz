@@ -22,6 +22,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.views.decorators.http import require_GET, require_POST
 from django.views.decorators.http import require_http_methods
+from django.http import HttpResponseRedirect
 
 # Local imports
 from .crud import create_quizsession, create_userresponse
@@ -47,39 +48,6 @@ UUID_REGEX = re.compile(r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a
 
 # Logging
 logger = logging.getLogger(__name__)
-
-
-"""
-@login_required
-def user_dashboard(request):
-    # Fetch all quiz attempts by the logged-in user
-    quiz_attempts = QuizAttempt.objects.filter(user=request.user).order_by('-completed_at')
-
-    # Pass data to the template
-    return render(request, 'dashboard.html', {
-        'quiz_attempts': quiz_attempts
-    })
-"""
-class CustomLoginView(LoginView):
-    template_name = 'myapp/login.html'
-
-    def dispatch(self, request, *args, **kwargs):
-        logout(request)
-        return super().dispatch(request, *args, **kwargs)
-
-    def form_valid(self, form):
-        return super().form_valid(form)
-
-    def get_success_url(self):
-        return '/'
-        
-
-class CustomLogoutView(LogoutView):
-    next_page = '/'  # Redirect URL after logout
-
-    def dispatch(self, request, *args, **kwargs):
-        # Additional logic before logout
-        return super().dispatch(request, *args, **kwargs)
 
 
 @login_required_decorator

@@ -18,6 +18,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -62,7 +63,9 @@ ROOT_URLCONF = 'vwquiz.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        #'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [ BASE_DIR / 'login' / 'templates', 
+                  BASE_DIR / 'quizapp' / 'templates', ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,16 +139,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Other settings...
 STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'quizapp', 'static'),
-]
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'quizapp', 'static'),]
 
 
+STATIC_URL = '/static/' 
+STATICFILES_DIRS = [
+        BASE_DIR / 'login' / 'static', 
+        BASE_DIR / 'quizapp' / 'static', 
+        ]
 
-
+# Optional: Define STATIC_ROOT if you plan to use collectstatic 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # Default primary key field type

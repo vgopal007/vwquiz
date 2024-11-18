@@ -26,21 +26,20 @@ urlpatterns = [
 #  path('quizapp/', include('quizapp.urls')),  # Include app-specific URLs
 #  app-level URL patterns follow ...
    path('', views.quizapp , name = 'quizapp'),
-   path('', views.quiz, name= 'quiz'),
+   path('quiz/', views.quiz, name= 'quiz'),
    path('quiz/', views.quiz, name='quiz'),  # Add this line for the 'quiz/' URL
    path('api/get-quiz/', views.get_quiz, name='get_quiz'),
  # path('quizapp/', views.quiz_view, name= 'quiz_view'),
-   path('', views.next_question, name= 'next_question'),
-   path('', views.prev_question, name= 'prev_question'),
-   path('', views.goto_question, name= 'goto_question'),
-   path('', views.review, name= 'review'),
+ # path('next_question/', views.next_question, name= 'next_question'),
+ #  path('', views.prev_question, name= 'prev_question'),
+ #  path('', views.goto_question, name= 'goto_question'),
+ #  path('', views.review, name= 'review'),
    path('storeuserresponse/', views.storeuserresponse, name='storeuserresponse'),
    path('', views.storeuserresponse, name='storeuserresponse'),
    path('', views.storeuserresponse, name='storeuserresponse'),
    path('session_report/<str:session_id>/', views.session_report, name='session_report'),
    path('update_quiz_session/<str:session_id>/', views.update_quiz_session, name='update_quiz_session'),
    #path('create-quizsession/', views.create_quizsession, name='create_quizsession'),
-   #path('login/', include('login.urls')),
-   path('', include('login.urls')),
+   path('login/', include('login.urls')),
 ]
 
