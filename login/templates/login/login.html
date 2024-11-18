@@ -1,159 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+{% extends 'base.html' %}
 
-        /* Centered container */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-        }
+{% block content %}
+    <div class="login-container">
+        <h2>Login</h2>
+		<!-- Include jQuery from a CDN --> <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <form id="loginForm">
+			<input type="hidden" name="next" value="{{ next }}">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-        /* Form container styling */
-        .login-container {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        .login-container h2 {
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
+            <input type="submit" value="Login">
+        </form>
 
-        .login-container label {
-            font-size: 0.9rem;
-            color: #555;
-        }
+        <p>Login.html - Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
 
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 0.5rem 0 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
+        <!-- Message dialogue box -->
+        <div id="message" class="dialogue-box"></div>
+    </div>
 
-        .login-container input[type="submit"] {
-            background: #007bff;
-            color: #fff;
-            border: none;
-            padding: 0.8rem;
-            cursor: pointer;
-            border-radius: 4px;
-            width: 100%;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
+    <script>
+        $('#loginForm').on('submit', function(event) {
+            event.preventDefault();  // Prevent form from reloading the page
 
-        .login-container input[type="submit"]:hover {
-            background: #0056b3;
-        }
-
-        .login-container p {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .login-container a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .login-container a:hover {
-            text-decoration: underline;
-        }
-
-        /* Message dialogue boxes */
-        .dialogue-box {
-            margin-top: 1rem;
-            padding: 0.8rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            display: none; /* Hidden by default */
-        }
-
-        .success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-    </style>
-</head>
-<body>
-
-<div class="login-container">
-    <h2>Login</h2>
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <input type="submit" value="Login">
-    </form>
-
-    <p>Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
-
-    <!-- Message dialogue box -->
-    <div id="message" class="dialogue-box"></div>
-</div>
-
-<script>
-    $('#loginForm').on('submit', function(event) {
-        event.preventDefault();  // Prevent form from reloading the page
-
-        $.ajax({
-            type: 'POST',
-            url: "{% url 'login' %}",  // URL for the login view
-            data: {
-                'username': $('#username').val(),
-                'password': $('#password').val(),
-                'csrfmiddlewaretoken': '{{ csrf_token }}'  // CSRF token for security
-            },
-            success: function(response) {
-                let messageBox = $('#message');
-                if (response.status === 'success') {
-                    messageBox.removeClass('error').addClass('success').text(response.message).fadeIn();
-                    setTimeout(function() {
-                        window.location.href = '/';  // Redirect to homepage or another page
-                    }, 1000);
-                } else {
-                    messageBox.removeClass('success').addClass('error').text(response.message).fadeIn();
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'login' %}",  // URL for the login view
+                data: {
+                    'username': $('#username').val(),
+                    'password': $('#password').val(),
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'  // CSRF token for security
+                },
+                success: function(response) {
+                    let messageBox = $('#message');
+                    if (response.status === 'success') {
+                        messageBox.removeClass('error').addClass('success').text(response.message).fadeIn();
+                        setTimeout(function() {
+                            window.location.href = '/';  // Redirect to homepage or another page
+                        }, 1000);
+                    } else {
+                        messageBox.removeClass('success').addClass('error').text(response.message).fadeIn();
+                    }
+                },
+                error: function(xhr, status, error) {
+                    $('#message').removeClass('success').addClass('error').text('Something went wrong. Try again later.').fadeIn();
                 }
-            },
-            error: function(xhr, status, error) {
-                $('#message').removeClass('success').addClass('error').text('Something went wrong. Try again later.').fadeIn();
-            }
+            });
         });
-    });
-</script>
-
-</body>
-</html>
+    </script>
+{% endblock %}
