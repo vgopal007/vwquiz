@@ -1,0 +1,28 @@
+
+SAT Math Topics
+The SAT Math section is divided into two parts:
+Calculator Allowed
+Math with Calculator (37 questions, 38 minutes)
+Geometry: circles, triangles, quadrilaterals, polygons, 3D geometry
+Trigonometry: sine, cosine, tangent, graphs
+Data Analysis: charts, graphs, tables, statistical analysis
+Algebra: linear equations, systems, functions, quadratic equations
+Calculator Not Allowed
+Math without Calculator (20 questions, 20 minutes)
+Algebra: linear equations, systems, functions, quadratic equations
+Geometry: points, lines, angles, triangles, circles
+Trigonometry: basic concepts, sine, cosine, tangent
+Number Sense: ratios, proportions, percentages
+Additional Topics
+Functions: domain, range, composition
+Graphs: linear, quadratic, exponential
+Statistics: mean, median, mode
+Probability: basic concepts
+Reference
+College Board's SAT Math Guide
+Khan Academy's SAT Math Prep
+
+Query:
+Give me 10 questions on "Geometry" for SAT Math exams with radio box type in json format 
+given below" [ { "question": ".", "type": "", "choices":"", "correct_answer":, "answer_explanation": "", "difficulty_level": "", "topic": "", "reference":"" } ] 
+Quiz can include questions in the form of true/false and type being RB for radio buttons
