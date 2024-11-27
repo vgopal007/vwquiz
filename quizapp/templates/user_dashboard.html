@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .half {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .lesson-content {
+            display: none;
+        }
+        .lesson-title {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Dashboard</h1>
+    
+    <div class="container">
+        <div class="half">
+            <h2>Subjects and Topics</h2>
+            {% if subjects %}
+                <ul>
+                    {% for subject_data in subjects %}
+                        <li>{{ subject_data.subject.subject_name }}</li>
+                        <ul>
+                            {% for topic_data in subject_data.topics %}
+                                <li>
+    <span class="lesson-title" data-topic-id="{{ topic_data.topic.id }}">{{ topic_data.topic.topic }}</span>
+	<ul class="lesson-content">
+	                                         {% if topic_data.lessons %}
+                                            {% for lesson in topic_data.lessons %}
+                                                <li>
+                                                    <h3>{{ lesson.title }}</h3>
+                                                    <div>{{ lesson.text_content|safe }}</div> <!-- Use the safe filter here -->
+                                                    {% if lesson.audio_content %}
+                                                    <audio controls>
+                                                        <source src="{{ lesson.audio_content.url }}" type="audio/mpeg">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                    {% endif %}
+                                                    {% if lesson.video_content %}
+                                                    <video controls>
+                                                        <source src="{{ lesson.video_content.url }}" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                        {% else %}
+                                            <li>No lessons available for this topic.</li>
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No subjects found.</p>
+            {% endif %}
+        </div>
+
+        <div class="half">
+            <h2>Previous Sessions by Subject</h2>
+            {% if sessions_by_subject %}
+                {% for subject_name, sessions in sessions_by_subject.items %}
+                    <h3>{{ subject_name }}</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Session ID</th>
+                                <th>Test Mode</th>
+                                <th>Total Questions</th>
+                                <th>Correct Answers</th>
+                                <th>Score</th>
+                                <th>Completed</th>
+                                <th>Timed Out</th>
+                                <th>Test Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for session in sessions %}
+                                {% if forloop.counter <= 10 %}
+                                    <tr>
+                                        <td>{{ session.id }}</td>
+                                        <td>{{ session.get_test_mode_display }}</td>
+                                        <td>{{ session.total_questions }}</td>
+                                        <td>{{ session.correct_answers }}</td>
+                                        <td>{{ session.score }}</td>
+                                        <td>{{ session.completed }}</td>
+                                        <td>{{ session.timed_out }}</td>
+                                        <td>{{ session.test_duration_minutes }} minutes</td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <!-- Navigation links -->
+                    <a href="{% url 'user_dashboard' %}?page=1">First</a>
+                    <a href="{% url 'user_dashboard' %}?page={{ page_number|add:-1 }}">Previous</a>
+                    <a href="{% url 'user_dashboard' %}?page={{ page_number|add:1 }}">Next</a>
+                    <a href="{% url 'user_dashboard' %}?page={{ total_pages }}">Last</a>
+                {% endfor %}
+            {% else %}
+                <p>No previous sessions found.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Test mode links -->
+    {% for subject_data in subjects %}
+        {% if subject_data.subject.subject_name %}
+            <p>Take Quiz for {{ subject_data.subject.subject_name }}:</p>
+            <a href="{% url 'quizapp' subject=subject_data.subject.subject_name test_mode='P' %}">Practice Test</a>
+            <br/><br/>  <!-- Increased spacing -->
+            <a href="{% url 'quizapp' subject=subject_data.subject.subject_name test_mode='T' %}">Real Test</a>
+            <br/><br/>  <!-- Increased spacing -->
+            <br/>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Debugging Statements 
+    <p>Debug: Template is being rendered.</p>
+    <p>Debug: Subjects - {{ subjects }}</p>
+    <p>Debug: Sessions by Subject - {{ sessions_by_subject }}</p>
+    -->
+    
+    <script>
+ function toggleContent(event) {
+        var topicId = event.target.getAttribute('data-topic-id');
+        var content = event.target.nextElementSibling;
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+
+    var lessonTitles = document.getElementsByClassName('lesson-title');
+    for (var i = 0; i < lessonTitles.length; i++) {
+        lessonTitles[i].addEventListener('click', toggleContent);
+    }
+ </script>
+</body>
+</html>

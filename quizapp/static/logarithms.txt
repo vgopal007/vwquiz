@@ -1,0 +1,55 @@
+Here's a cheat sheet, formulas, and a lesson on SAT Logarithms:
+Cheat Sheet:
+Logarithms are the inverse operation of exponentiation.
+The logarithm of a number to a given base is the exponent to which the base must be raised to produce that number.
+Common logarithms have a base of 10, while natural logarithms have a base of e (approximately 2.718).
+Logarithmic functions are the inverse of exponential functions.
+Formulas:
+Logarithmic Form: logb(x) = y, where b is the base, x is the argument, and y is the exponent.
+Exponential Form: by = x, where b is the base, y is the exponent, and x is the result.
+Change of Base Formula: logb(x) = logc(x) / logc(b), where b is the new base, c is the original base, and x is the argument.
+Logarithmic Properties:
+logb(1) = 0
+logb(b) = 1
+logb(x^n) = n logb(x)
+logb(xy) = logb(x) + logb(y)
+logb(x/y) = logb(x) - logb(y)
+Lesson:
+Logarithms are a fundamental concept in mathematics, and they play a crucial role in many areas of science and engineering.
+What is a Logarithm?
+A logarithm is the inverse operation of exponentiation. In other words, it's the opposite of raising a number to a power.
+For example, consider the equation:
+2^3 = 8
+In this equation, 2 is the base, 3 is the exponent, and 8 is the result.
+Now, let's ask the question: what power must we raise 2 to in order to get 8?
+The answer, of course, is 3. This is equivalent to saying that the logarithm of 8 to the base 2 is 3:
+log2(8) = 3
+Types of Logarithms
+There are two main types of logarithms:
+Common Logarithms: These have a base of 10. They are denoted by the symbol "log" without any subscript.
+For example:
+log(100) = 2, since 10^2 = 100
+Natural Logarithms: These have a base of e (approximately 2.718). They are denoted by the symbol "ln".
+For example:
+ln(e) = 1, since e^1 = e
+Properties of Logarithms
+Logarithms have several important properties that make them useful in a wide range of applications:
+Product Property: The logarithm of a product is equal to the sum of the logarithms.
+For example:
+log(xy) = log(x) + log(y)
+Quotient Property: The logarithm of a quotient is equal to the difference of the logarithms.
+For example:
+log(x/y) = log(x) - log(y)
+Power Property: The logarithm of a power is equal to the exponent times the logarithm of the base.
+For example:
+log(x^n) = n log(x)
+Solving Logarithmic Equations
+To solve a logarithmic equation, we can use the properties of logarithms to isolate the variable.
+For example:
+log(x) = 2
+To solve this equation, we can exponentiate both sides:
+10^2 = x
+x = 100
+Conclusion
+Logarithms are a fundamental concept in mathematics, and they play a crucial role in many areas of science and engineering.
+By understanding the properties and applications of logarithms, you can develop a deeper appreciation for the mathematical structures that underlie our world.

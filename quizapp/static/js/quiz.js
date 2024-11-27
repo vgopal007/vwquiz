@@ -2,29 +2,22 @@
         const app = Vue.createApp({
         delimiters: ['[[', ']]'],
         data() {
-          return {
-            // subject: subject, 
-			// test_mode: test_mode,
-			// duration: 45,
-			// num_questions: 40,
-			// apply_fuzzy: true,
-
-			
-	            subject: subjectData.subject_name,
-                test_mode: test_mode,
-			//	duration: subjectData?.test_duration_minutes || 30,  this will be handled in created()
-                num_questions: subjectData.test_numberofquestions,
-				apply_fuzzylogic: subjectData.apply_fuzzylogic,
+          return {	
+	        subject: subjectData.subject_name,
+            test_mode: test_mode,
+	        num_questions: subjectData.test_numberofquestions,
+			apply_fuzzylogic: subjectData.apply_fuzzylogic,
 			
 			save_userresponse: true,
 			
 			feedback: '',
-            questions: [], // Array to hold fetched questions
             session_id : "", // session gets value from get_questions view
             currentQuestionIndex: 0, // Index to track the current question
             markedQuestions: [], // Array to track marked questions
-			userResponses: {}, // Object to store user responses
 
+            questions: [], // Array to hold fetched questions
+			userResponses: {}, // Object to store user responses
+			userisCorrect: {},
             selectedAnswers: {}, // Object to track selected answers
             selectedAnswer: {}, // Object to track selected answer
             quizEnded: false, // Flag to indicate if the quiz has ended
@@ -34,6 +27,7 @@
                 totalQuestions: 0,   
                 correctAnswers: 0,
                 incorrectAnswers: 0,
+				unattemptedAnswers: 0,
 				overallScore: 0, 
 				reportData: [],
             }         
@@ -84,9 +78,10 @@
 			fetch(`/api/get-quiz/?subject=${this.subject}&test_mode=${this.test_mode}`)
 				.then(response => response.json())
 			.then(result => {
-			console.log(result); // Debugging line
+			//console.log(result); // Debugging line
 			if (result.data && result.data.length > 0) {
 				this.questions = result.data;
+				this.results.totalQuestions=result.data.length;
 				this.session_id = result.session_id;
 			} else {
 				this.displayErrorMessage("No questions found.");
@@ -111,18 +106,6 @@
 			}, 3000); // 3-second delay
 		},
 		
-		 // Fetch questions from the API
-        getQuestionsold() {
-
-            fetch(`/api/get-quiz/?subject=${this.subject}&test_mode=${this.test_mode}`)
-              .then(response => response.json())
-              .then(result => {
-                console.log(result); // Debugging line
-                this.questions = result.data;
-                this.session_id = result.session_id
-               
-              });
-          },  
  		
 		selectAnswer(event, uid, questionType) {
 			// Assuming event.target.value contains the user's selected answer
@@ -168,62 +151,100 @@
 			return this.userResponses[uid];
 		},
           
-          // Check the selected answer and update counters
-        checksaveAnswer(uid) {
-			const session_id = this.session_id;
-            // console.log("Session is : ", session_id); // Debugging line
- 
-            let iscorrect=false;
-            const question = this.questions.find(q => q.uid === uid);
-            // console.log("Question is : ", question); // Debugging line
-            // console.log("Question_ID is : ", uid); // Debugging line
-			const questionType=question.question_type;
-            // console.log("Question type is : ", questionType); // Debugging line
- 			const selectedAnswer = questionType === 'IN' || questionType === 'RB'
-				? this.selectedAnswer[uid]
-				: this.selectedAnswers[uid];
-            // console.log("Selected Answer is : ", selectedAnswer); // Debugging line
+		  
+checksaveAnswer(uid) {
+    const session_id = this.session_id;
+  
+    let isCorrect = false;
+    const question = this.questions.find(q => q.uid === uid);
+    const questionType = question.question_type;
+    const selectedAnswer = questionType === 'IN' || questionType === 'RB'
+        ? this.selectedAnswer[uid]
+        : this.selectedAnswers[uid];
 
+    const data = {
+        session_id,
+        question_id: uid,
+        selected_answers: this.selectedAnswers[uid],
+        selected_answer: this.selectedAnswer[uid],
+        is_correct: isCorrect,
+        test_mode: this.test_mode,
+        apply_fuzzylogic: this.apply_fuzzylogic,
+    };
+  
+    //console.log('Calling storeuserresponse with data :', data);
 
-            const data = {
-                //uid: uid,
-                //answer: event.target.value
-                session_id: session_id,
-                question_id: uid, 
-                selected_answers: this.selectedAnswers[uid],
-                selected_answer: this.selectedAnswer[uid],
-                is_correct: iscorrect,
-				test_mode: this.test_mode,
-				apply_fuzzylogic: this.apply_fuzzylogic,
-            };
-			
+    return fetch('/storeuserresponse/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': this.getCookie('csrftoken')
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        const isAnswer = data.is_answer;
+        const correctResponse = data.correct_response;
+        const explanation = data.explanation;
 
-    
-			
-            // Send the data to the Django view using fetch
-            return fetch('/storeuserresponse/', {
-                method: 'POST',
-                headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': this.getCookie('csrftoken') // Include CSRF token for security
-            },
-                body: JSON.stringify(data)
-                })
-            .then(response => response.json())
-			.then(data => {
-				return {
-					isAnswer: data.is_answer,
-					correctResponse: data.correct_response,
-					explanation: data.explanation
-				};
-				
-                })
-            .catch((error) => {
-                console.error('Error:', error);
-                }); 
-				
-	
-		},
+        this.userisCorrect[uid] = isAnswer;
+		if (isAnswer) {
+			this.results.correctAnswers++;
+		} else {
+			this.results.incorrectAnswers++;
+		}
+        return {
+            isAnswer: isAnswer,
+            correctResponse: correctResponse,
+            explanation: explanation
+        };
+    })
+    .catch(error => console.error('Error:', error));
+},
+		  
+		  
+		  
+		  
+  checksaveAnswerold(uid) {
+
+  const session_id = this.session_id;
+  
+  let isCorrect = false;
+  const question = this.questions.find(q => q.uid === uid);
+  const questionType = question.question_type;
+  const selectedAnswer = questionType === 'IN' || questionType === 'RB'
+    ? this.selectedAnswer[uid]
+    : this.selectedAnswers[uid];
+
+  const data = {
+    session_id,
+    question_id: uid,
+    selected_answers: this.selectedAnswers[uid],
+    selected_answer: this.selectedAnswer[uid],
+    is_correct: isCorrect,
+    test_mode: this.test_mode,
+    apply_fuzzylogic: this.apply_fuzzylogic,
+  };
+  
+   //console.log('Calling storeuserresponse with data :', data);
+
+    return fetch('/storeuserresponse/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': this.getCookie('csrftoken')
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => ({
+      isAnswer: data.is_answer,
+      correctResponse: data.correct_response,
+      explanation: data.explanation,
+    }))
+    .catch(error => console.error('Error:', error));
+},
 
 		clearFeedback() {
 			// document.getElementById('feedback').innerText = '';
@@ -277,7 +298,7 @@
 		checkResponse() {
 			this.checksaveAnswer(this.questions[this.currentQuestionIndex].uid)
 			.then(response => {
-				console.log(response.isAnswer, response.correctResponse, response.explanation);
+				//console.log(response.isAnswer, response.correctResponse, response.explanation);
 			if (this.test_mode == "P") {
 				if (response.isAnswer == true) {
 					this.feedback = 'Correct!';
@@ -285,7 +306,7 @@
 					let message = `Incorrect!\nThe correct answer is: ${response.correctResponse}\n${response.explanation || ''}`;
 					this.feedback = message;
 				}
-				console.log('Feedback:', this.feedback);
+				// console.log('Feedback:', this.feedback);
 			}
 		});
 		},
@@ -295,20 +316,20 @@
 			this.checksaveAnswer(this.questions[this.currentQuestionIndex].uid);
 			if (confirm("Are you sure you want to exit?")) {
 				this.endQuiz();
-			
-				const url = `/update_quiz_session/${this.session_id}/`;
-				fetch(url, {
+				if (this.test_mode === "T") {
+					const url = `/update_quiz_session/${this.session_id}/`;
+					fetch(url, {
 					method: 'POST',
 					headers: {
 					'Content-Type': 'application/json',
 					'X-CSRFToken': this.getCookie('csrftoken'), 
-				},
+					},
 			
-				})
-				.then(response => response.json())
-				.then(data => console.log(data))
-				.catch(error => console.error(error));
-
+					})
+					.then(response => response.json())
+					.then(data => {})
+					.catch(error => console.error(error));
+				}
 				this.callGetQuizResults(); 
 
 			}
@@ -320,46 +341,92 @@
 			clearInterval(this.timer);
 		},
 		  
-	
-    callGetQuizResults() {
-		console.log('Starting callGetQuizResults');
-		return fetch('/session_report/' + this.session_id + '/', {
-			method: 'GET',
+	callGetQuizResults() {
+  if (this.test_mode === "P") {
+    //console.log('Quiz results data:', this.results);
+	//console.log('Questions : ', this.questions);
+	//console.log('UserResponses: ', this.userResponses); 
+	//console.log('IsCorrect:', this.userisCorrect);
+	fetch('/practice_report/', {
+			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 				'X-CSRFToken': this.getCookie('csrftoken')
 			},
-		})
-		.then(response => response.json())
-		.then(data => {
-			if (!data) {
-				console.error('Invalid quiz results data:', data);
-				alert('Error retrieving quiz results. Please try again.');
-				return;
-				}
+			body: JSON.stringify({
+				results: this.results,
+				questions: this.questions,
+				userResponses: this.userResponses,
+				userisCorrect: this.userisCorrect
+				})
+			})
+	.then(response => response.json())
+	.then(data => {
+	 if (!data) {
+        console.error('Invalid quiz results data:', data);
+        alert('Error retrieving quiz results. Please try again.');
+        return;
+      }
 
-		console.log('Quiz results data:', JSON.stringify(data, null, 2));
+      //console.log('Quiz results data:', JSON.stringify(data, null, 2));
 
-		this.results.totalQuestions = data.total_questions;
-		this.results.correctAnswers = data.correct_answers;
-		this.results.incorrectAnswers = data.incorrect_answers;
-		this.results.overallScore = data.score;
-		this.results.reportData = data.question_report;
-		console.log('Quiz results :', this.results);
-		this.quizEnded = true;
-	
-		Vue.nextTick(() => {
-			this.$forceUpdate();
-			});
-	    console.log('Ending callGetQuizResults');
-		})
-		.catch(error => {
-			console.error('Error fetching quiz results:', error);
-			alert('Error retrieving quiz results. Please try again.');
-			this.quizEnded = false;
-		});
-	},
-   
+      this.results.totalQuestions = data.total_questions;
+      this.results.correctAnswers = data.correct_answers;
+      this.results.incorrectAnswers = data.incorrect_answers;
+	  this.results.unattemptedAnswers = data.unattempted_answers;
+      this.results.overallScore = data.score;
+      this.results.reportData = data.question_report;
+      // console.log('Quiz results:', this.results);
+      this.quizEnded = true;
+
+      Vue.nextTick(() => {
+        this.$forceUpdate();
+      });
+      //console.log('Ending callGetQuizResults');
+    })	
+	.catch(error => console.error(error));
+  } else {
+    // Fetch quiz results from the server
+    return fetch('/session_report/' + this.session_id + '/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': this.getCookie('csrftoken')
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (!data) {
+        console.error('Invalid quiz results data:', data);
+        alert('Error retrieving quiz results. Please try again.');
+        return;
+      }
+
+      //console.log('Quiz results data:', JSON.stringify(data, null, 2));
+
+      this.results.totalQuestions = data.total_questions;
+      this.results.correctAnswers = data.correct_answers;
+      this.results.incorrectAnswers = data.incorrect_answers;
+	  this.results.unattemptedAnswers = data.unattempted_answers;
+      this.results.overallScore = data.score;
+      this.results.reportData = data.question_report;
+      //console.log('Quiz results:', this.results);
+      this.quizEnded = true;
+
+      Vue.nextTick(() => {
+        this.$forceUpdate();
+      });
+      //console.log('Ending callGetQuizResults');
+    })
+    .catch(error => {
+      console.error('Error fetching quiz results:', error);
+      alert('Error retrieving quiz results. Please try again.');
+      this.quizEnded = false;
+    });
+  }
+},
+
+ 
           // Start the timer
         startTimer() {
             this.timer = setInterval(() => {
@@ -375,23 +442,23 @@
  
  
 		async created() {
-			 this.duration = subjectData?.test_duration_minutes || 30;
+			this.duration = subjectData?.test_duration_minutes || 30;
 			this.timeLeft = this.duration * 60; // Initialize timeLeft here
 
 			await this.getQuestions();
 			this.startTimer();
-			console.log('Created:', this.results);
+			// console.log('Created:', this.results);
 		},
 		
 	
 
 	
 		mounted() {
-			console.log(subjectData);
-			console.log("subject :", this.subject, ", test_mode : ", this.test_mode);
-			console.log("duration :", this.duration, ", Number of Questions : ", this.num_questions,"Apply Fuzzy Logic :", this.apply_fuzzylogic);
-			console.log(typeof subjectData.test_duration_minutes); // Check data type
-			console.log(subjectData.test_duration_minutes); // Verify value
+			//console.log(subjectData);
+			//console.log("subject :", this.subject, ", test_mode : ", this.test_mode);
+			//console.log("duration :", this.duration, ", Number of Questions : ", this.num_questions,"Apply Fuzzy Logic :", this.apply_fuzzylogic);
+			//console.log(typeof subjectData.test_duration_minutes); // Check data type
+			//console.log(subjectData.test_duration_minutes); // Verify value
 			// Disable browser actions
 			window.addEventListener('beforeunload', function(event) {
 			event.preventDefault();
