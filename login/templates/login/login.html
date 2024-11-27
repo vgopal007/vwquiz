@@ -1,11 +1,18 @@
-{% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
     <div class="login-container">
         <h2>Login</h2>
-		<!-- Include jQuery from a CDN --> <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <form id="loginForm">
-			<input type="hidden" name="next" value="{{ next }}">
+        <form id="loginForm" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
@@ -20,34 +27,6 @@
         <!-- Message dialogue box -->
         <div id="message" class="dialogue-box"></div>
     </div>
-
-    <script>
-        $('#loginForm').on('submit', function(event) {
-            event.preventDefault();  // Prevent form from reloading the page
-
-            $.ajax({
-                type: 'POST',
-                url: "{% url 'login' %}",  // URL for the login view
-                data: {
-                    'username': $('#username').val(),
-                    'password': $('#password').val(),
-                    'csrfmiddlewaretoken': '{{ csrf_token }}'  // CSRF token for security
-                },
-                success: function(response) {
-                    let messageBox = $('#message');
-                    if (response.status === 'success') {
-                        messageBox.removeClass('error').addClass('success').text(response.message).fadeIn();
-                        setTimeout(function() {
-                            window.location.href = '/';  // Redirect to homepage or another page
-                        }, 1000);
-                    } else {
-                        messageBox.removeClass('success').addClass('error').text(response.message).fadeIn();
-                    }
-                },
-                error: function(xhr, status, error) {
-                    $('#message').removeClass('success').addClass('error').text('Something went wrong. Try again later.').fadeIn();
-                }
-            });
-        });
-    </script>
+</body>
+</html>
 {% endblock %}

@@ -7,9 +7,28 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
-
+from quizapp.views import user_dashboard
+#from quizapp.views import quizapp
+from django.contrib.auth.forms import AuthenticationForm # Import AuthenticationForm
 
 def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('user_dashboard')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login/login.html', {'form': form})
+
+
+
+
+def oldlogin_view(request):
     print("In login view of login app")
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -19,9 +38,8 @@ def login_view(request):
         
         if user is not None:
             login(request, user)
-            next_url = request.POST.get('next', '/quizapp/')
-            return HttpResponseRedirect(next_url)
-            #return JsonResponse({'status': 'success', 'message': 'Login successful'})
+            return redirect('user_dashboard') # Redirect to the user_dashboard view
+            #return redirect('quizapp')
         else:
             return JsonResponse({'status': 'error', 'message': 'Invalid credentials'})
     
