@@ -14,6 +14,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
+from django.core.paginator import Paginator
 from django.db.models import Count, Sum
 from django.forms import Form
 from django.forms.models import model_to_dict
@@ -34,6 +35,7 @@ import logging
 import re
 import random
 from collections import Counter
+from uuid import uuid4
 
 # Third-party imports
 import requests
@@ -50,38 +52,103 @@ UUID_REGEX = re.compile(r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a
 logger = logging.getLogger(__name__)
 
 
-@login_required_decorator
-def quizapp(request):
+from django.core.paginator import Paginator
+
+@login_required
+def user_dashboard(request):
+    user = request.user
+    
+    # Retrieve user subscriptions
+    user_subscriptions = UserSubscription.objects.filter(user_id=user)
+    
+    # Prepare data for subjects, topics, and lessons 
+    subjects_data = [] 
+    for subscription in user_subscriptions: 
+        subject = subscription.subject
+        topics = subject.types_topic.all().order_by('topic')
+        topics_data = [] 
+        for topic in topics: 
+            lessons = topic.get_related_lessons() 
+            topics_data.append({ 
+                'topic': topic, 
+                'lessons': lessons 
+            }) 
+            
+        subjects_data.append({ 
+            'subject': subject, 
+            'topics': topics_data
+        })
+ 
+    # Retrieve all sessions for the logged-in user
+    sessions = QuizSession.objects.filter(user_id=user).order_by('created_at')
+    
+    # Organize sessions by subject
+    sessions_by_subject = {}
+    for session in sessions:
+        subject_name = session.subject.subject_name
+        if subject_name not in sessions_by_subject:
+            sessions_by_subject[subject_name] = []
+        sessions_by_subject[subject_name].append(session)
+    
+    # Pagination
+    page_number = request.GET.get('page', 1)
+    paginator = Paginator(sessions, 10)
+    page_obj = paginator.get_page(page_number)
+    total_pages = paginator.num_pages
+    
     context = {
-        'categories': Types.objects.all(),
-        'test_mode': "P"
+        'subjects': subjects_data,
+        'sessions_by_subject': sessions_by_subject,
+        'page_obj': page_obj,
+        'page_number': page_number,
+        'total_pages': total_pages,
     }
+    #print("Context passed to dashboard : ", context)
+    return render(request, 'user_dashboard.html', context)
 
-    subject_id = request.GET.get('subject')
-    test_mode = request.GET.get('test_mode')
+@login_required
+def quizapp(request, subject, test_mode):
+    """
+    Quiz app view.
 
+    Args:
+        subject (str): Subject name.
+        test_mode (str): Test mode ('P' for practice, 'T' for real).
+
+    Returns:
+        Rendered quiz.html template.
+    """
+    # Validate test mode
     if test_mode not in ['P', 'T']:
         test_mode = 'P'
 
-    if subject_id and test_mode:
-        subject_obj = Types.objects.get(subject_name=subject_id)
-        subject_dict = model_to_dict(subject_obj)
-        context = {
-            'subject': subject_dict,
-            'test_mode': test_mode
-        }
-        
-        return render(request, 'quiz.html', {
-            'subject': json.dumps(subject_dict),
-            'test_mode': test_mode
-            })
-        # return render(request, 'quiz.html', context)
+    # Retrieve subject object
+    try:
+        subject_obj = Types.objects.get(subject_name=subject)
+    except Types.DoesNotExist:
+        return redirect('user_dashboard')  # Handle subject not found
 
+    # Prepare context
+    #subject_dict = subject_obj.__dict__
+     
+    subject_dict = { 
+        'id': str(subject_obj.uid), 
+        'subject_name': subject_obj.subject_name, 
+        'domain': subject_obj.domain, 
+        'test_duration_minutes': subject_obj.test_duration_minutes, 
+        'test_numberofquestions': subject_obj.test_numberofquestions, 
+        'apply_fuzzylogic': subject_obj.apply_fuzzylogic, 
+    }
+    
+    context = {
+        'subject': json.dumps(subject_dict),
+        'test_mode': test_mode
+    }
 
-    return render(request, 'quizapp.html', context)
+    return render(request, 'quiz.html', context)
+    
 
-
-@login_required_decorator
+@login_required
 def quiz(request):
     """
     Handles quiz page.
@@ -159,17 +226,19 @@ def get_quiz(request):
         # Access attributes of Types
         test_duration_minutes = types_data['test_duration_minutes']
         test_numberofquestions = types_data['test_numberofquestions']            
-        print("Questions : ", test_numberofquestions, " Duration in Minutes : ", test_duration_minutes)
+        #print("Questions : ", test_numberofquestions, " Duration in Minutes : ", test_duration_minutes)
         # Create Session
-        session_data = {"user_obj":user_obj, "types_obj":types_obj, "test_numberofquestions":test_numberofquestions, "test_duration_minutes":test_duration_minutes
+        session_data = {"user_obj":user_obj, "types_obj":types_obj, "test_numberofquestions":test_numberofquestions, "test_duration_minutes":test_duration_minutes, "test_mode":test_mode
                        }
-        session = create_quizsession(session_data)       
+        if test_mode=="T":
+            session = create_quizsession(session_data)   
+            session_id=session.uid
+        else:
+            session_id=uuid4().hex  # not stored
         
         # Select questions
         sampled_records = select_questions(types_obj)
-        if sampled_records:
-            print("Sampled Records:", sampled_records)
-        else:
+        if sampled_records is None:
             print("No sampled records found.")
             
         data = []
@@ -191,11 +260,11 @@ def get_quiz(request):
             })
             
             # Create user_response holder with all questions in the session for Test mode
-            #if test_mode == 'T':
-            user_response = create_userresponse(session, question_obj)
+            if test_mode == 'T':
+                user_response = create_userresponse(session, question_obj)
         
-        payload = {'status': True, 'data': data, 'session_id': session.uid}
-        print (payload)
+        payload = {'status': True, 'data': data, 'session_id': session_id}
+        #print (payload)
         return JsonResponse(payload)  # Return JsonResponse
     except Exception as e:
         print(e)
@@ -252,10 +321,10 @@ def check_userresponse(question, selected_answers, selected_answer, apply_fuzzyl
             if selected_answer == correct_answer:
                 is_correct = True
             else:
-                print("apply_fuzzylogic: ", apply_fuzzylogic)
+                #print("apply_fuzzylogic: ", apply_fuzzylogic)
                 if apply_fuzzylogic:          
                     similarity = fuzz.ratio(selected_answer, correct_answer)
-                    print("similarity : ", similarity) 
+                    #print("similarity : ", similarity) 
                     if similarity > 80:  # Adjust threshold
                         is_correct = True
                         # you also need to install the fuzzy library
@@ -273,6 +342,7 @@ def check_userresponse(question, selected_answers, selected_answer, apply_fuzzyl
 ## Updated storeuserresponse:
 @require_POST
 def storeuserresponse(request):
+    #print("Executing storeuserresponse")
     try:
         data = json.loads(request.body)
 
@@ -286,14 +356,19 @@ def storeuserresponse(request):
         if not session_id or not question_id:
             return JsonResponse({'message': 'Invalid data'}, status=400)
 
-        session = get_object_or_404(QuizSession, uid=session_id)
         question = get_object_or_404(Question, uid=question_id)
-
+        #print("Calling check_userresponse with - ",question, selected_answers, selected_answer,apply_fuzzylogic)
         answer_result = check_userresponse(question, selected_answers, selected_answer,apply_fuzzylogic)
+        #print('is_answer', answer_result['is_correct'])
+        #print('correct_response', answer_result['correct_response'])
+        #print('explanation', answer_result['explanation'])
 
         # Save user response for Tests, but not Practice mode
-        #if test_mode=="T":
-        try:
+        if test_mode=="T":
+            #print("Executing storeuserresponse and saving the userresponse")
+            session = get_object_or_404(QuizSession, uid=session_id)
+
+            try:
                 UserResponse.objects.update_or_create(
                 session=session,
                 question=question,
@@ -303,24 +378,81 @@ def storeuserresponse(request):
                     'is_correct': answer_result['is_correct'],
                 }
                 )
-        except Exception as e:
+            except Exception as e:
                return JsonResponse({'message': f'Database error: {str(e)}'}, status=500)
 
+ 
         return JsonResponse({
             'message': 'User responses saved successfully!',
             'is_answer': answer_result['is_correct'],
             'correct_response': answer_result['correct_response'],
-            'explanation': answer_result['explanation'],
+            'explanation': answer_result['explanation']
         })
 
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
+        print("JSON decode error:", e)
         return JsonResponse({'message': 'Invalid JSON'}, status=400)
-    except ObjectDoesNotExist:
+    except ObjectDoesNotExist as e:
+        print("Object does not exist:", e)
         return JsonResponse({'message': 'Session or question not found'}, status=404)
     except Exception as e:
+        print("Server error:", e)
         return JsonResponse({'message': f'Server error: {str(e)}'}, status=500)
 
+@require_http_methods(["GET", "POST"])
+def practice_report(request):
+    data = json.loads(request.body)
+    results = data.get('results')
+    questions = data.get('questions', [])
+    userResponses = data.get('userResponses', {})
+    userisCorrect = data.get('userisCorrect', {})
+    results['correctAnswers'] = sum(userisCorrect.values())
+    results['incorrectAnswers'] = sum(not x for x in userisCorrect.values())
+    unattempted_answers = len(questions) - len(userResponses)
+    results['unattemptedAnswers'] = unattempted_answers
+    if results['totalQuestions']>0:
+        results['score']=round(results['correctAnswers']/results['totalQuestions']*100,0)
+    else:
+        results['score']=0
+        
+    summary_report = {
+        'total_questions': results['totalQuestions'],
+        'correct_answers': results['correctAnswers'],
+        'incorrect_answers': results['incorrectAnswers'],
+        'unattempted_answers': results['unattemptedAnswers'],
+        'score': results['score'],
+    }
 
+    question_report = []
+    expected_answer=""
+    explanation=""
+    # Iterate over questions
+    for question in questions:
+        uid = question['uid']  # Get the question ID
+        selected_answers = userResponses.get(uid, [])  # Get the user responses for the question
+        is_correct = userisCorrect.get(uid, False)  # Get the correctness of the user response
+        # Retrieve the Question object based on the uid
+        question_obj = Question.objects.get(uid=uid)
+        # Call the get_correct_answer method on the Question object
+        if question_obj.question_type == "CB":
+            expected_answer=question_obj.get_correct_answers() 
+        else:
+            expected_answer=question_obj.get_correct_answer() 
+            
+        explanation = question_obj.answer_explanation
+        # Append question-wise report
+        question_report.append({
+            'question_text': question['question'],
+            'selected_answers': selected_answers,
+            'is_correct': is_correct,
+            'correct_answers': expected_answer,
+            'explanation': explanation,
+        })
+
+    report = {**summary_report, 'question_report': question_report}
+    #print(report)
+    return JsonResponse(report, safe=False, json_dumps_params={'indent': 4}, status=200)
+   
 @require_http_methods(["GET", "POST"])
 def session_report(request, session_id):
     try:
@@ -333,8 +465,7 @@ def session_report(request, session_id):
     report = {**summary_report, **question_report}
 
     return JsonResponse(report, safe=False, json_dumps_params={'indent': 4}, status=200)
-    #return render(request, 'results.html', {'report': report, 'form': form}, status=200)
-    
+     
 
 @require_http_methods(["POST"])
 def update_quiz_session(request, session_id):

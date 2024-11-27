@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import *
+from django.contrib.auth.decorators import login_required
+
+from ckeditor.fields import RichTextField
 
 import uuid
 import random
@@ -71,6 +74,32 @@ class Types(BaseModel):
             print(f"Warning: Total weight percentage ({total_weight_perc}) is not 100.")
 
         return topic_objs
+        
+
+    @login_required
+    def get_user_sessions(request, subject_name):
+        user = request.user
+    
+        try:
+            subject = Types.objects.get(subject_name=subject_name)
+            sessions = QuizSession.objects.filter(user_id=user, subject=subject)
+        except Types.DoesNotExist:
+            sessions = None
+
+        context = {
+            'sessions': sessions,
+            'subject_name': subject_name,
+        }
+
+        return render(request, 'quizapp/user_sessions.html', context)
+
+class UserSubscription(BaseModel):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, db_index=True)
+    subject = models.ForeignKey(Types, related_name='user_subjects', on_delete=models.CASCADE, db_index=True)
+    Active=models.BooleanField(default=False, blank=False)
+    created_at = models.DateField(auto_now_add=True)
+    expire_at = models.DateField()
+
 
 class Topics(BaseModel):
     """
@@ -108,7 +137,30 @@ class Topics(BaseModel):
             return data
         except Exception as e:
             return []
-          
+            
+    def get_related_lessons(self): 
+        return self.topic_lessons.filter(delete_flag=False).order_by('display_order')
+ 
+class TopicLesson(BaseModel): 
+    """ Represents lessons within a given topic. 
+    Attributes: topic (Topics): The topic to which the lesson belongs. 
+    title (str): The title of the lesson. 
+    text_content (str): 
+    The text content of the lesson. 
+    audio_content (FileField): The audio content of the lesson. 
+    video_content (FileField): The video content of the lesson. 
+    display_order (int): The order in which the lesson should be displayed. 
+    delete_flag (bool): Soft delete flag. """ 
+    class Meta: verbose_name_plural = "Topic Lessons" # Set the plural name explicitly 
+    topic = models.ForeignKey(Topics, related_name='topic_lessons', on_delete=models.CASCADE) 
+    title = models.CharField(max_length=100) 
+    #text_content = models.TextField(blank=True, null=True) 
+    text_content = RichTextField(blank=True, null=True)
+    audio_content = models.FileField(upload_to='audio/', blank=True, null=True) 
+    video_content = models.FileField(upload_to='video/', blank=True, null=True) 
+    display_order = models.IntegerField(default=1, validators=[MinValueValidator(0), MaxValueValidator(100)]) 
+    delete_flag = models.BooleanField(default=False, blank=False) # soft delete def __str__(self): return self.title
+ 
 
 class Question(BaseModel):
     """
@@ -218,7 +270,8 @@ class QuizSession(BaseModel):
             }
         total_questions = responses.count()
         correct_answers = responses.filter(is_correct=True).count()
-        incorrect_answers = total_questions - correct_answers
+        unattempted_answers = responses.filter(selected_answer__isnull=True, selected_answers__isnull=True).count()
+        incorrect_answers = total_questions - correct_answers - unattempted_answers
         if total_questions > 0:
             score = round((correct_answers / total_questions) * 100,0)
         else:
@@ -229,6 +282,7 @@ class QuizSession(BaseModel):
             'total_questions': total_questions,
             'correct_answers': correct_answers,
             'incorrect_answers': incorrect_answers,
+            'unattempted_answers':unattempted_answers,
             'score': score,
     }
 

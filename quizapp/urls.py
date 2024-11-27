@@ -2,10 +2,11 @@
 from django.urls import path, include
 from django.views.generic import TemplateView
 from quizapp import views
-from quizapp.views import quizapp, quiz, get_quiz, next_question, prev_question, goto_question, review
+from quizapp.views import quizapp, quiz, get_quiz, next_question, prev_question, goto_question, review, user_dashboard
 app_name = 'quizapp'
 urlpatterns = [
-   path('', views.quizapp , name = 'quizapp'),
+   path('', user_dashboard, name='user_dashboard'),
+   path('quizapp/', views.quizapp , name = 'quizapp'),
 #  path('quiz/', views.quiz, name= 'quiz'),
    path('quiz/', TemplateView.as_view(template_name='quiz.html')),   
    path('results/', TemplateView.as_view(template_name='results.html')),   
@@ -18,6 +19,8 @@ urlpatterns = [
    path('storeuserresponse/', views.storeuserresponse, name='storeuserresponse'),
    path('', views.storeuserresponse, name='storeuserresponse'),
    path('login/', include('login.urls')),
- 
+   path('ckeditor/', include('ckeditor_uploader.urls')),
   ]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
